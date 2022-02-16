@@ -1,0 +1,2 @@
+set(octo_adra_ros_wrapper_MESSAGE_FILES "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg/TargetValue.msg")
+set(octo_adra_ros_wrapper_SERVICE_FILES "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/srv/SetMode.srv")

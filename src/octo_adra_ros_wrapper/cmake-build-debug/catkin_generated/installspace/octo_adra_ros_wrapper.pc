@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: octo_adra_ros_wrapper
+Description: Description of octo_adra_ros_wrapper
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_generation roscpp std_msgs
