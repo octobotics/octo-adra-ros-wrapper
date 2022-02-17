@@ -173,6 +173,8 @@ AdraRosWrapper::disable_actuators_srv_callback_(std_srvs::Trigger::Request &req,
             ROS_ERROR("%s Actuator %d disable failed", log_header_.c_str(), id);
         }
     }
+    mode_ = NONE;
+    actuators_enabled_ = false;
     res.success = true;
     res.message = "Actuators disabled";
     return true;
