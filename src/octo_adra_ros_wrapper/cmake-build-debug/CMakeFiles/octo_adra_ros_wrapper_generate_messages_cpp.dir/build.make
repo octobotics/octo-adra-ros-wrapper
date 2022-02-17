@@ -53,10 +53,10 @@ RM = /snap/clion/180/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper
+CMAKE_SOURCE_DIR = /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug
+CMAKE_BINARY_DIR = /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug
 
 # Utility rule file for octo_adra_ros_wrapper_generate_messages_cpp.
 
@@ -73,14 +73,14 @@ devel/include/octo_adra_ros_wrapper/SetMode.h: /opt/ros/melodic/lib/gencpp/gen_c
 devel/include/octo_adra_ros_wrapper/SetMode.h: ../srv/SetMode.srv
 devel/include/octo_adra_ros_wrapper/SetMode.h: /opt/ros/melodic/share/gencpp/msg.h.template
 devel/include/octo_adra_ros_wrapper/SetMode.h: /opt/ros/melodic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from octo_adra_ros_wrapper/SetMode.srv"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper && /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/srv/SetMode.srv -Iocto_adra_ros_wrapper:/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p octo_adra_ros_wrapper -o /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel/include/octo_adra_ros_wrapper -e /opt/ros/melodic/share/gencpp/cmake/..
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from octo_adra_ros_wrapper/SetMode.srv"
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper && /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/srv/SetMode.srv -Iocto_adra_ros_wrapper:/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p octo_adra_ros_wrapper -o /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel/include/octo_adra_ros_wrapper -e /opt/ros/melodic/share/gencpp/cmake/..
 
 devel/include/octo_adra_ros_wrapper/TargetValue.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
 devel/include/octo_adra_ros_wrapper/TargetValue.h: ../msg/TargetValue.msg
 devel/include/octo_adra_ros_wrapper/TargetValue.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from octo_adra_ros_wrapper/TargetValue.msg"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper && /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg/TargetValue.msg -Iocto_adra_ros_wrapper:/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p octo_adra_ros_wrapper -o /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel/include/octo_adra_ros_wrapper -e /opt/ros/melodic/share/gencpp/cmake/..
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from octo_adra_ros_wrapper/TargetValue.msg"
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper && /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg/TargetValue.msg -Iocto_adra_ros_wrapper:/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p octo_adra_ros_wrapper -o /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel/include/octo_adra_ros_wrapper -e /opt/ros/melodic/share/gencpp/cmake/..
 
 octo_adra_ros_wrapper_generate_messages_cpp: CMakeFiles/octo_adra_ros_wrapper_generate_messages_cpp
 octo_adra_ros_wrapper_generate_messages_cpp: devel/include/octo_adra_ros_wrapper/SetMode.h
@@ -97,6 +97,6 @@ CMakeFiles/octo_adra_ros_wrapper_generate_messages_cpp.dir/clean:
 .PHONY : CMakeFiles/octo_adra_ros_wrapper_generate_messages_cpp.dir/clean
 
 CMakeFiles/octo_adra_ros_wrapper_generate_messages_cpp.dir/depend:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles/octo_adra_ros_wrapper_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles/octo_adra_ros_wrapper_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/octo_adra_ros_wrapper_generate_messages_cpp.dir/depend
 

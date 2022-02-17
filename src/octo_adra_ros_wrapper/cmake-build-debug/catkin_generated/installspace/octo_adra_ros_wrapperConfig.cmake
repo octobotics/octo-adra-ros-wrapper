@@ -67,8 +67,8 @@ set(octo_adra_ros_wrapper_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(octo_adra_ros_wrapper_SOURCE_PREFIX /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper)
-  set(octo_adra_ros_wrapper_DEVEL_PREFIX /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel)
+  set(octo_adra_ros_wrapper_SOURCE_PREFIX /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper)
+  set(octo_adra_ros_wrapper_DEVEL_PREFIX /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel)
   set(octo_adra_ros_wrapper_INSTALL_PREFIX "")
   set(octo_adra_ros_wrapper_PREFIX ${octo_adra_ros_wrapper_DEVEL_PREFIX})
 else()

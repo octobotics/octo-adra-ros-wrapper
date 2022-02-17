@@ -57,10 +57,10 @@ RM = /snap/clion/180/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper
+CMAKE_SOURCE_DIR = /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug
+CMAKE_BINARY_DIR = /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,14 +142,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi//CMakeFiles/progress.marks
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utapi/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles 0
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi//CMakeFiles/progress.marks
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utapi/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utapi/clean
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utapi/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,22 +158,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utapi/preinstall
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utapi/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utapi/preinstall
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utapi/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 utapi/CMakeFiles/utapi.dir/rule:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utapi/CMakeFiles/utapi.dir/rule
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utapi/CMakeFiles/utapi.dir/rule
 .PHONY : utapi/CMakeFiles/utapi.dir/rule
 
 # Convenience name for target.
@@ -182,7 +182,7 @@ utapi: utapi/CMakeFiles/utapi.dir/rule
 
 # fast build rule for target.
 utapi/fast:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/build
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/build
 .PHONY : utapi/fast
 
 adra/adra_api_base.o: adra/adra_api_base.cpp.o
@@ -190,7 +190,7 @@ adra/adra_api_base.o: adra/adra_api_base.cpp.o
 
 # target to build an object file
 adra/adra_api_base.cpp.o:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/adra/adra_api_base.cpp.o
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/adra/adra_api_base.cpp.o
 .PHONY : adra/adra_api_base.cpp.o
 
 adra/adra_api_base.i: adra/adra_api_base.cpp.i
@@ -198,7 +198,7 @@ adra/adra_api_base.i: adra/adra_api_base.cpp.i
 
 # target to preprocess a source file
 adra/adra_api_base.cpp.i:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/adra/adra_api_base.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/adra/adra_api_base.cpp.i
 .PHONY : adra/adra_api_base.cpp.i
 
 adra/adra_api_base.s: adra/adra_api_base.cpp.s
@@ -206,7 +206,7 @@ adra/adra_api_base.s: adra/adra_api_base.cpp.s
 
 # target to generate assembly for a file
 adra/adra_api_base.cpp.s:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/adra/adra_api_base.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/adra/adra_api_base.cpp.s
 .PHONY : adra/adra_api_base.cpp.s
 
 adra/adra_api_serial.o: adra/adra_api_serial.cpp.o
@@ -214,7 +214,7 @@ adra/adra_api_serial.o: adra/adra_api_serial.cpp.o
 
 # target to build an object file
 adra/adra_api_serial.cpp.o:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.o
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.o
 .PHONY : adra/adra_api_serial.cpp.o
 
 adra/adra_api_serial.i: adra/adra_api_serial.cpp.i
@@ -222,7 +222,7 @@ adra/adra_api_serial.i: adra/adra_api_serial.cpp.i
 
 # target to preprocess a source file
 adra/adra_api_serial.cpp.i:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.i
 .PHONY : adra/adra_api_serial.cpp.i
 
 adra/adra_api_serial.s: adra/adra_api_serial.cpp.s
@@ -230,7 +230,7 @@ adra/adra_api_serial.s: adra/adra_api_serial.cpp.s
 
 # target to generate assembly for a file
 adra/adra_api_serial.cpp.s:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.s
 .PHONY : adra/adra_api_serial.cpp.s
 
 base/arm_api_base.o: base/arm_api_base.cpp.o
@@ -238,7 +238,7 @@ base/arm_api_base.o: base/arm_api_base.cpp.o
 
 # target to build an object file
 base/arm_api_base.cpp.o:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/arm_api_base.cpp.o
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/arm_api_base.cpp.o
 .PHONY : base/arm_api_base.cpp.o
 
 base/arm_api_base.i: base/arm_api_base.cpp.i
@@ -246,7 +246,7 @@ base/arm_api_base.i: base/arm_api_base.cpp.i
 
 # target to preprocess a source file
 base/arm_api_base.cpp.i:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/arm_api_base.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/arm_api_base.cpp.i
 .PHONY : base/arm_api_base.cpp.i
 
 base/arm_api_base.s: base/arm_api_base.cpp.s
@@ -254,7 +254,7 @@ base/arm_api_base.s: base/arm_api_base.cpp.s
 
 # target to generate assembly for a file
 base/arm_api_base.cpp.s:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/arm_api_base.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/arm_api_base.cpp.s
 .PHONY : base/arm_api_base.cpp.s
 
 base/arm_report_config.o: base/arm_report_config.cpp.o
@@ -262,7 +262,7 @@ base/arm_report_config.o: base/arm_report_config.cpp.o
 
 # target to build an object file
 base/arm_report_config.cpp.o:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/arm_report_config.cpp.o
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/arm_report_config.cpp.o
 .PHONY : base/arm_report_config.cpp.o
 
 base/arm_report_config.i: base/arm_report_config.cpp.i
@@ -270,7 +270,7 @@ base/arm_report_config.i: base/arm_report_config.cpp.i
 
 # target to preprocess a source file
 base/arm_report_config.cpp.i:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/arm_report_config.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/arm_report_config.cpp.i
 .PHONY : base/arm_report_config.cpp.i
 
 base/arm_report_config.s: base/arm_report_config.cpp.s
@@ -278,7 +278,7 @@ base/arm_report_config.s: base/arm_report_config.cpp.s
 
 # target to generate assembly for a file
 base/arm_report_config.cpp.s:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/arm_report_config.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/arm_report_config.cpp.s
 .PHONY : base/arm_report_config.cpp.s
 
 base/arm_report_status.o: base/arm_report_status.cpp.o
@@ -286,7 +286,7 @@ base/arm_report_status.o: base/arm_report_status.cpp.o
 
 # target to build an object file
 base/arm_report_status.cpp.o:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/arm_report_status.cpp.o
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/arm_report_status.cpp.o
 .PHONY : base/arm_report_status.cpp.o
 
 base/arm_report_status.i: base/arm_report_status.cpp.i
@@ -294,7 +294,7 @@ base/arm_report_status.i: base/arm_report_status.cpp.i
 
 # target to preprocess a source file
 base/arm_report_status.cpp.i:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/arm_report_status.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/arm_report_status.cpp.i
 .PHONY : base/arm_report_status.cpp.i
 
 base/arm_report_status.s: base/arm_report_status.cpp.s
@@ -302,7 +302,7 @@ base/arm_report_status.s: base/arm_report_status.cpp.s
 
 # target to generate assembly for a file
 base/arm_report_status.cpp.s:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/arm_report_status.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/arm_report_status.cpp.s
 .PHONY : base/arm_report_status.cpp.s
 
 base/servo_api_base.o: base/servo_api_base.cpp.o
@@ -310,7 +310,7 @@ base/servo_api_base.o: base/servo_api_base.cpp.o
 
 # target to build an object file
 base/servo_api_base.cpp.o:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/servo_api_base.cpp.o
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/servo_api_base.cpp.o
 .PHONY : base/servo_api_base.cpp.o
 
 base/servo_api_base.i: base/servo_api_base.cpp.i
@@ -318,7 +318,7 @@ base/servo_api_base.i: base/servo_api_base.cpp.i
 
 # target to preprocess a source file
 base/servo_api_base.cpp.i:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/servo_api_base.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/servo_api_base.cpp.i
 .PHONY : base/servo_api_base.cpp.i
 
 base/servo_api_base.s: base/servo_api_base.cpp.s
@@ -326,7 +326,7 @@ base/servo_api_base.s: base/servo_api_base.cpp.s
 
 # target to generate assembly for a file
 base/servo_api_base.cpp.s:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/servo_api_base.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/base/servo_api_base.cpp.s
 .PHONY : base/servo_api_base.cpp.s
 
 common/network.o: common/network.cpp.o
@@ -334,7 +334,7 @@ common/network.o: common/network.cpp.o
 
 # target to build an object file
 common/network.cpp.o:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/network.cpp.o
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/network.cpp.o
 .PHONY : common/network.cpp.o
 
 common/network.i: common/network.cpp.i
@@ -342,7 +342,7 @@ common/network.i: common/network.cpp.i
 
 # target to preprocess a source file
 common/network.cpp.i:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/network.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/network.cpp.i
 .PHONY : common/network.cpp.i
 
 common/network.s: common/network.cpp.s
@@ -350,7 +350,7 @@ common/network.s: common/network.cpp.s
 
 # target to generate assembly for a file
 common/network.cpp.s:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/network.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/network.cpp.s
 .PHONY : common/network.cpp.s
 
 common/preempt_rt.o: common/preempt_rt.cpp.o
@@ -358,7 +358,7 @@ common/preempt_rt.o: common/preempt_rt.cpp.o
 
 # target to build an object file
 common/preempt_rt.cpp.o:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/preempt_rt.cpp.o
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/preempt_rt.cpp.o
 .PHONY : common/preempt_rt.cpp.o
 
 common/preempt_rt.i: common/preempt_rt.cpp.i
@@ -366,7 +366,7 @@ common/preempt_rt.i: common/preempt_rt.cpp.i
 
 # target to preprocess a source file
 common/preempt_rt.cpp.i:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/preempt_rt.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/preempt_rt.cpp.i
 .PHONY : common/preempt_rt.cpp.i
 
 common/preempt_rt.s: common/preempt_rt.cpp.s
@@ -374,7 +374,7 @@ common/preempt_rt.s: common/preempt_rt.cpp.s
 
 # target to generate assembly for a file
 common/preempt_rt.cpp.s:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/preempt_rt.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/preempt_rt.cpp.s
 .PHONY : common/preempt_rt.cpp.s
 
 common/socket_serial.o: common/socket_serial.cpp.o
@@ -382,7 +382,7 @@ common/socket_serial.o: common/socket_serial.cpp.o
 
 # target to build an object file
 common/socket_serial.cpp.o:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/socket_serial.cpp.o
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/socket_serial.cpp.o
 .PHONY : common/socket_serial.cpp.o
 
 common/socket_serial.i: common/socket_serial.cpp.i
@@ -390,7 +390,7 @@ common/socket_serial.i: common/socket_serial.cpp.i
 
 # target to preprocess a source file
 common/socket_serial.cpp.i:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/socket_serial.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/socket_serial.cpp.i
 .PHONY : common/socket_serial.cpp.i
 
 common/socket_serial.s: common/socket_serial.cpp.s
@@ -398,7 +398,7 @@ common/socket_serial.s: common/socket_serial.cpp.s
 
 # target to generate assembly for a file
 common/socket_serial.cpp.s:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/socket_serial.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/socket_serial.cpp.s
 .PHONY : common/socket_serial.cpp.s
 
 common/socket_tcp.o: common/socket_tcp.cpp.o
@@ -406,7 +406,7 @@ common/socket_tcp.o: common/socket_tcp.cpp.o
 
 # target to build an object file
 common/socket_tcp.cpp.o:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/socket_tcp.cpp.o
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/socket_tcp.cpp.o
 .PHONY : common/socket_tcp.cpp.o
 
 common/socket_tcp.i: common/socket_tcp.cpp.i
@@ -414,7 +414,7 @@ common/socket_tcp.i: common/socket_tcp.cpp.i
 
 # target to preprocess a source file
 common/socket_tcp.cpp.i:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/socket_tcp.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/socket_tcp.cpp.i
 .PHONY : common/socket_tcp.cpp.i
 
 common/socket_tcp.s: common/socket_tcp.cpp.s
@@ -422,7 +422,7 @@ common/socket_tcp.s: common/socket_tcp.cpp.s
 
 # target to generate assembly for a file
 common/socket_tcp.cpp.s:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/socket_tcp.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/common/socket_tcp.cpp.s
 .PHONY : common/socket_tcp.cpp.s
 
 utra/utra_api_tcp.o: utra/utra_api_tcp.cpp.o
@@ -430,7 +430,7 @@ utra/utra_api_tcp.o: utra/utra_api_tcp.cpp.o
 
 # target to build an object file
 utra/utra_api_tcp.cpp.o:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.o
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.o
 .PHONY : utra/utra_api_tcp.cpp.o
 
 utra/utra_api_tcp.i: utra/utra_api_tcp.cpp.i
@@ -438,7 +438,7 @@ utra/utra_api_tcp.i: utra/utra_api_tcp.cpp.i
 
 # target to preprocess a source file
 utra/utra_api_tcp.cpp.i:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.i
 .PHONY : utra/utra_api_tcp.cpp.i
 
 utra/utra_api_tcp.s: utra/utra_api_tcp.cpp.s
@@ -446,7 +446,7 @@ utra/utra_api_tcp.s: utra/utra_api_tcp.cpp.s
 
 # target to generate assembly for a file
 utra/utra_api_tcp.cpp.s:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.s
 .PHONY : utra/utra_api_tcp.cpp.s
 
 utra/utra_flxie_api.o: utra/utra_flxie_api.cpp.o
@@ -454,7 +454,7 @@ utra/utra_flxie_api.o: utra/utra_flxie_api.cpp.o
 
 # target to build an object file
 utra/utra_flxie_api.cpp.o:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.o
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.o
 .PHONY : utra/utra_flxie_api.cpp.o
 
 utra/utra_flxie_api.i: utra/utra_flxie_api.cpp.i
@@ -462,7 +462,7 @@ utra/utra_flxie_api.i: utra/utra_flxie_api.cpp.i
 
 # target to preprocess a source file
 utra/utra_flxie_api.cpp.i:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.i
 .PHONY : utra/utra_flxie_api.cpp.i
 
 utra/utra_flxie_api.s: utra/utra_flxie_api.cpp.s
@@ -470,7 +470,7 @@ utra/utra_flxie_api.s: utra/utra_flxie_api.cpp.s
 
 # target to generate assembly for a file
 utra/utra_flxie_api.cpp.s:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.s
 .PHONY : utra/utra_flxie_api.cpp.s
 
 utra/utra_flxiv_api.o: utra/utra_flxiv_api.cpp.o
@@ -478,7 +478,7 @@ utra/utra_flxiv_api.o: utra/utra_flxiv_api.cpp.o
 
 # target to build an object file
 utra/utra_flxiv_api.cpp.o:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.o
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.o
 .PHONY : utra/utra_flxiv_api.cpp.o
 
 utra/utra_flxiv_api.i: utra/utra_flxiv_api.cpp.i
@@ -486,7 +486,7 @@ utra/utra_flxiv_api.i: utra/utra_flxiv_api.cpp.i
 
 # target to preprocess a source file
 utra/utra_flxiv_api.cpp.i:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.i
 .PHONY : utra/utra_flxiv_api.cpp.i
 
 utra/utra_flxiv_api.s: utra/utra_flxiv_api.cpp.s
@@ -494,7 +494,7 @@ utra/utra_flxiv_api.s: utra/utra_flxiv_api.cpp.s
 
 # target to generate assembly for a file
 utra/utra_flxiv_api.cpp.s:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.s
 .PHONY : utra/utra_flxiv_api.cpp.s
 
 utra/utra_report_config.o: utra/utra_report_config.cpp.o
@@ -502,7 +502,7 @@ utra/utra_report_config.o: utra/utra_report_config.cpp.o
 
 # target to build an object file
 utra/utra_report_config.cpp.o:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_report_config.cpp.o
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_report_config.cpp.o
 .PHONY : utra/utra_report_config.cpp.o
 
 utra/utra_report_config.i: utra/utra_report_config.cpp.i
@@ -510,7 +510,7 @@ utra/utra_report_config.i: utra/utra_report_config.cpp.i
 
 # target to preprocess a source file
 utra/utra_report_config.cpp.i:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_report_config.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_report_config.cpp.i
 .PHONY : utra/utra_report_config.cpp.i
 
 utra/utra_report_config.s: utra/utra_report_config.cpp.s
@@ -518,7 +518,7 @@ utra/utra_report_config.s: utra/utra_report_config.cpp.s
 
 # target to generate assembly for a file
 utra/utra_report_config.cpp.s:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_report_config.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_report_config.cpp.s
 .PHONY : utra/utra_report_config.cpp.s
 
 utra/utra_report_status.o: utra/utra_report_status.cpp.o
@@ -526,7 +526,7 @@ utra/utra_report_status.o: utra/utra_report_status.cpp.o
 
 # target to build an object file
 utra/utra_report_status.cpp.o:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_report_status.cpp.o
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_report_status.cpp.o
 .PHONY : utra/utra_report_status.cpp.o
 
 utra/utra_report_status.i: utra/utra_report_status.cpp.i
@@ -534,7 +534,7 @@ utra/utra_report_status.i: utra/utra_report_status.cpp.i
 
 # target to preprocess a source file
 utra/utra_report_status.cpp.i:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_report_status.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_report_status.cpp.i
 .PHONY : utra/utra_report_status.cpp.i
 
 utra/utra_report_status.s: utra/utra_report_status.cpp.s
@@ -542,7 +542,7 @@ utra/utra_report_status.s: utra/utra_report_status.cpp.s
 
 # target to generate assembly for a file
 utra/utra_report_status.cpp.s:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_report_status.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(MAKE) $(MAKESILENT) -f utapi/CMakeFiles/utapi.dir/build.make utapi/CMakeFiles/utapi.dir/utra/utra_report_status.cpp.s
 .PHONY : utra/utra_report_status.cpp.s
 
 # Help Target
@@ -615,6 +615,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

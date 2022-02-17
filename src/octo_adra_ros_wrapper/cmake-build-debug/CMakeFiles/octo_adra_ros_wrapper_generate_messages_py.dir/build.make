@@ -53,10 +53,10 @@ RM = /snap/clion/180/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper
+CMAKE_SOURCE_DIR = /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug
+CMAKE_BINARY_DIR = /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug
 
 # Utility rule file for octo_adra_ros_wrapper_generate_messages_py.
 
@@ -73,25 +73,25 @@ CMakeFiles/octo_adra_ros_wrapper_generate_messages_py: devel/lib/python2.7/dist-
 
 devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/msg/_TargetValue.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
 devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/msg/_TargetValue.py: ../msg/TargetValue.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG octo_adra_ros_wrapper/TargetValue"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg/TargetValue.msg -Iocto_adra_ros_wrapper:/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p octo_adra_ros_wrapper -o /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG octo_adra_ros_wrapper/TargetValue"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg/TargetValue.msg -Iocto_adra_ros_wrapper:/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p octo_adra_ros_wrapper -o /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/msg
 
 devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
 devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/msg/__init__.py: devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/msg/_TargetValue.py
 devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/msg/__init__.py: devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/srv/_SetMode.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for octo_adra_ros_wrapper"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/msg --initpy
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for octo_adra_ros_wrapper"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/msg --initpy
 
 devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/srv/_SetMode.py: /opt/ros/melodic/lib/genpy/gensrv_py.py
 devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/srv/_SetMode.py: ../srv/SetMode.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV octo_adra_ros_wrapper/SetMode"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/srv/SetMode.srv -Iocto_adra_ros_wrapper:/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p octo_adra_ros_wrapper -o /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV octo_adra_ros_wrapper/SetMode"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/srv/SetMode.srv -Iocto_adra_ros_wrapper:/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p octo_adra_ros_wrapper -o /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/srv
 
 devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/srv/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
 devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/srv/__init__.py: devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/msg/_TargetValue.py
 devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/srv/__init__.py: devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/srv/_SetMode.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python srv __init__.py for octo_adra_ros_wrapper"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/srv --initpy
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python srv __init__.py for octo_adra_ros_wrapper"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/srv --initpy
 
 octo_adra_ros_wrapper_generate_messages_py: CMakeFiles/octo_adra_ros_wrapper_generate_messages_py
 octo_adra_ros_wrapper_generate_messages_py: devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper/msg/_TargetValue.py
@@ -110,6 +110,6 @@ CMakeFiles/octo_adra_ros_wrapper_generate_messages_py.dir/clean:
 .PHONY : CMakeFiles/octo_adra_ros_wrapper_generate_messages_py.dir/clean
 
 CMakeFiles/octo_adra_ros_wrapper_generate_messages_py.dir/depend:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles/octo_adra_ros_wrapper_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles/octo_adra_ros_wrapper_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/octo_adra_ros_wrapper_generate_messages_py.dir/depend
 

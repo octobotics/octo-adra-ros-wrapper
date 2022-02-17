@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/gtest/googlemock/cmake_install.cmake")
+  include("/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/gtest/googlemock/cmake_install.cmake")
 
 endif()
 

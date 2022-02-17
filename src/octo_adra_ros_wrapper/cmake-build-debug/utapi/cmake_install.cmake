@@ -1,4 +1,4 @@
-# Install script for directory: /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi
+# Install script for directory: /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -53,10 +53,10 @@ RM = /snap/clion/180/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper
+CMAKE_SOURCE_DIR = /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug
+CMAKE_BINARY_DIR = /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug
 
 # Utility rule file for clean_test_results.
 
@@ -67,7 +67,7 @@ include CMakeFiles/clean_test_results.dir/compiler_depend.make
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/test_results
+	/usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

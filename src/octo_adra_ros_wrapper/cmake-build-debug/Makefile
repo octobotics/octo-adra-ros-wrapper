@@ -57,10 +57,10 @@ RM = /snap/clion/180/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper
+CMAKE_SOURCE_DIR = /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug
+CMAKE_BINARY_DIR = /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -354,6 +354,19 @@ run_tests/fast:
 .PHONY : run_tests/fast
 
 #=============================================================================
+# Target rules for targets named _octo_adra_ros_wrapper_generate_messages_check_deps_SetMode
+
+# Build rule for target.
+_octo_adra_ros_wrapper_generate_messages_check_deps_SetMode: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _octo_adra_ros_wrapper_generate_messages_check_deps_SetMode
+.PHONY : _octo_adra_ros_wrapper_generate_messages_check_deps_SetMode
+
+# fast build rule for target.
+_octo_adra_ros_wrapper_generate_messages_check_deps_SetMode/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_octo_adra_ros_wrapper_generate_messages_check_deps_SetMode.dir/build.make CMakeFiles/_octo_adra_ros_wrapper_generate_messages_check_deps_SetMode.dir/build
+.PHONY : _octo_adra_ros_wrapper_generate_messages_check_deps_SetMode/fast
+
+#=============================================================================
 # Target rules for targets named download_extra_data
 
 # Build rule for target.
@@ -417,32 +430,6 @@ std_msgs_generate_messages_nodejs: cmake_check_build_system
 std_msgs_generate_messages_nodejs/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 .PHONY : std_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named _octo_adra_ros_wrapper_generate_messages_check_deps_SetMode
-
-# Build rule for target.
-_octo_adra_ros_wrapper_generate_messages_check_deps_SetMode: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _octo_adra_ros_wrapper_generate_messages_check_deps_SetMode
-.PHONY : _octo_adra_ros_wrapper_generate_messages_check_deps_SetMode
-
-# fast build rule for target.
-_octo_adra_ros_wrapper_generate_messages_check_deps_SetMode/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/_octo_adra_ros_wrapper_generate_messages_check_deps_SetMode.dir/build.make CMakeFiles/_octo_adra_ros_wrapper_generate_messages_check_deps_SetMode.dir/build
-.PHONY : _octo_adra_ros_wrapper_generate_messages_check_deps_SetMode/fast
-
-#=============================================================================
-# Target rules for targets named adra_ros_wrapper_node
-
-# Build rule for target.
-adra_ros_wrapper_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 adra_ros_wrapper_node
-.PHONY : adra_ros_wrapper_node
-
-# fast build rule for target.
-adra_ros_wrapper_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/adra_ros_wrapper_node.dir/build.make CMakeFiles/adra_ros_wrapper_node.dir/build
-.PHONY : adra_ros_wrapper_node/fast
 
 #=============================================================================
 # Target rules for targets named clean_test_results
@@ -666,6 +653,19 @@ octo_adra_ros_wrapper_generate_messages_py/fast:
 .PHONY : octo_adra_ros_wrapper_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named octo_adra_ros
+
+# Build rule for target.
+octo_adra_ros: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 octo_adra_ros
+.PHONY : octo_adra_ros
+
+# fast build rule for target.
+octo_adra_ros/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/octo_adra_ros.dir/build.make CMakeFiles/octo_adra_ros.dir/build
+.PHONY : octo_adra_ros/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -761,7 +761,7 @@ src/octo_adra_ros_wrapper.o: src/octo_adra_ros_wrapper.cpp.o
 
 # target to build an object file
 src/octo_adra_ros_wrapper.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/adra_ros_wrapper_node.dir/build.make CMakeFiles/adra_ros_wrapper_node.dir/src/octo_adra_ros_wrapper.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/octo_adra_ros.dir/build.make CMakeFiles/octo_adra_ros.dir/src/octo_adra_ros_wrapper.cpp.o
 .PHONY : src/octo_adra_ros_wrapper.cpp.o
 
 src/octo_adra_ros_wrapper.i: src/octo_adra_ros_wrapper.cpp.i
@@ -769,7 +769,7 @@ src/octo_adra_ros_wrapper.i: src/octo_adra_ros_wrapper.cpp.i
 
 # target to preprocess a source file
 src/octo_adra_ros_wrapper.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/adra_ros_wrapper_node.dir/build.make CMakeFiles/adra_ros_wrapper_node.dir/src/octo_adra_ros_wrapper.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/octo_adra_ros.dir/build.make CMakeFiles/octo_adra_ros.dir/src/octo_adra_ros_wrapper.cpp.i
 .PHONY : src/octo_adra_ros_wrapper.cpp.i
 
 src/octo_adra_ros_wrapper.s: src/octo_adra_ros_wrapper.cpp.s
@@ -777,7 +777,7 @@ src/octo_adra_ros_wrapper.s: src/octo_adra_ros_wrapper.cpp.s
 
 # target to generate assembly for a file
 src/octo_adra_ros_wrapper.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/adra_ros_wrapper_node.dir/build.make CMakeFiles/adra_ros_wrapper_node.dir/src/octo_adra_ros_wrapper.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/octo_adra_ros.dir/build.make CMakeFiles/octo_adra_ros.dir/src/octo_adra_ros_wrapper.cpp.s
 .PHONY : src/octo_adra_ros_wrapper.cpp.s
 
 # Help Target
@@ -832,11 +832,11 @@ help:
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... std_srvs_generate_messages_py"
 	@echo "... tests"
-	@echo "... adra_ros_wrapper_node"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... octo_adra_ros"
 	@echo "... utapi"
 	@echo "... src/octo_adra_ros_wrapper.o"
 	@echo "... src/octo_adra_ros_wrapper.i"

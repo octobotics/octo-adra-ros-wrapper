@@ -1,4 +1,4 @@
-# Install script for directory: /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper
+# Install script for directory: /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -61,7 +61,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/_setup_util.py")
+  file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -73,7 +73,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/env.sh")
+  file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -86,8 +86,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES
-    "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/setup.bash"
-    "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/local_setup.bash"
+    "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/setup.bash"
+    "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
@@ -101,8 +101,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES
-    "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/setup.sh"
-    "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/local_setup.sh"
+    "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/setup.sh"
+    "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
@@ -116,8 +116,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES
-    "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/setup.zsh"
-    "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/local_setup.zsh"
+    "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/setup.zsh"
+    "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
@@ -130,68 +130,68 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/.rosinstall")
+  file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/.rosinstall")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/octo_adra_ros_wrapper/msg" TYPE FILE FILES "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg/TargetValue.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/octo_adra_ros_wrapper/msg" TYPE FILE FILES "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg/TargetValue.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/octo_adra_ros_wrapper/srv" TYPE FILE FILES "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/srv/SetMode.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/octo_adra_ros_wrapper/srv" TYPE FILE FILES "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/srv/SetMode.srv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/octo_adra_ros_wrapper/cmake" TYPE FILE FILES "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/octo_adra_ros_wrapper-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/octo_adra_ros_wrapper/cmake" TYPE FILE FILES "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/octo_adra_ros_wrapper-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel/include/octo_adra_ros_wrapper")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel/include/octo_adra_ros_wrapper")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel/share/roseus/ros/octo_adra_ros_wrapper")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel/share/roseus/ros/octo_adra_ros_wrapper")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel/share/common-lisp/ros/octo_adra_ros_wrapper")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel/share/common-lisp/ros/octo_adra_ros_wrapper")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel/share/gennodejs/ros/octo_adra_ros_wrapper")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel/share/gennodejs/ros/octo_adra_ros_wrapper")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel/lib/python2.7/dist-packages/octo_adra_ros_wrapper")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/octo_adra_ros_wrapper.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/octo_adra_ros_wrapper.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/octo_adra_ros_wrapper/cmake" TYPE FILE FILES "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/octo_adra_ros_wrapper-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/octo_adra_ros_wrapper/cmake" TYPE FILE FILES "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/octo_adra_ros_wrapper-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/octo_adra_ros_wrapper/cmake" TYPE FILE FILES
-    "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/octo_adra_ros_wrapperConfig.cmake"
-    "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/octo_adra_ros_wrapperConfig-version.cmake"
+    "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/octo_adra_ros_wrapperConfig.cmake"
+    "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/installspace/octo_adra_ros_wrapperConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/octo_adra_ros_wrapper" TYPE FILE FILES "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/octo_adra_ros_wrapper" TYPE FILE FILES "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/gtest/cmake_install.cmake")
-  include("/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi/cmake_install.cmake")
+  include("/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/gtest/cmake_install.cmake")
+  include("/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi/cmake_install.cmake")
 
 endif()
 
@@ -203,5 +203,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

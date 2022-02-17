@@ -2,7 +2,7 @@
 
 message(STATUS "octo_adra_ros_wrapper: 1 messages, 1 services")
 
-set(MSG_I_FLAGS "-Iocto_adra_ros_wrapper:/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iocto_adra_ros_wrapper:/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,14 +17,14 @@ add_custom_target(octo_adra_ros_wrapper_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg/TargetValue.msg" NAME_WE)
+get_filename_component(_filename "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/srv/SetMode.srv" NAME_WE)
 add_custom_target(_octo_adra_ros_wrapper_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "octo_adra_ros_wrapper" "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg/TargetValue.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "octo_adra_ros_wrapper" "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/srv/SetMode.srv" ""
 )
 
-get_filename_component(_filename "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/srv/SetMode.srv" NAME_WE)
+get_filename_component(_filename "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg/TargetValue.msg" NAME_WE)
 add_custom_target(_octo_adra_ros_wrapper_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "octo_adra_ros_wrapper" "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/srv/SetMode.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "octo_adra_ros_wrapper" "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg/TargetValue.msg" ""
 )
 
 #
@@ -34,7 +34,7 @@ add_custom_target(_octo_adra_ros_wrapper_generate_messages_check_deps_${_filenam
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(octo_adra_ros_wrapper
-  "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg/TargetValue.msg"
+  "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg/TargetValue.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/octo_adra_ros_wrapper
@@ -42,7 +42,7 @@ _generate_msg_cpp(octo_adra_ros_wrapper
 
 ### Generating Services
 _generate_srv_cpp(octo_adra_ros_wrapper
-  "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/srv/SetMode.srv"
+  "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/srv/SetMode.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/octo_adra_ros_wrapper
@@ -60,9 +60,9 @@ add_custom_target(octo_adra_ros_wrapper_generate_messages_cpp
 add_dependencies(octo_adra_ros_wrapper_generate_messages octo_adra_ros_wrapper_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg/TargetValue.msg" NAME_WE)
+get_filename_component(_filename "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/srv/SetMode.srv" NAME_WE)
 add_dependencies(octo_adra_ros_wrapper_generate_messages_cpp _octo_adra_ros_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/srv/SetMode.srv" NAME_WE)
+get_filename_component(_filename "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg/TargetValue.msg" NAME_WE)
 add_dependencies(octo_adra_ros_wrapper_generate_messages_cpp _octo_adra_ros_wrapper_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -75,7 +75,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS octo_adra_ros_wrapper_generate_mess
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(octo_adra_ros_wrapper
-  "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg/TargetValue.msg"
+  "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg/TargetValue.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/octo_adra_ros_wrapper
@@ -83,7 +83,7 @@ _generate_msg_eus(octo_adra_ros_wrapper
 
 ### Generating Services
 _generate_srv_eus(octo_adra_ros_wrapper
-  "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/srv/SetMode.srv"
+  "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/srv/SetMode.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/octo_adra_ros_wrapper
@@ -101,9 +101,9 @@ add_custom_target(octo_adra_ros_wrapper_generate_messages_eus
 add_dependencies(octo_adra_ros_wrapper_generate_messages octo_adra_ros_wrapper_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg/TargetValue.msg" NAME_WE)
+get_filename_component(_filename "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/srv/SetMode.srv" NAME_WE)
 add_dependencies(octo_adra_ros_wrapper_generate_messages_eus _octo_adra_ros_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/srv/SetMode.srv" NAME_WE)
+get_filename_component(_filename "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg/TargetValue.msg" NAME_WE)
 add_dependencies(octo_adra_ros_wrapper_generate_messages_eus _octo_adra_ros_wrapper_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -116,7 +116,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS octo_adra_ros_wrapper_generate_mess
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(octo_adra_ros_wrapper
-  "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg/TargetValue.msg"
+  "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg/TargetValue.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/octo_adra_ros_wrapper
@@ -124,7 +124,7 @@ _generate_msg_lisp(octo_adra_ros_wrapper
 
 ### Generating Services
 _generate_srv_lisp(octo_adra_ros_wrapper
-  "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/srv/SetMode.srv"
+  "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/srv/SetMode.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/octo_adra_ros_wrapper
@@ -142,9 +142,9 @@ add_custom_target(octo_adra_ros_wrapper_generate_messages_lisp
 add_dependencies(octo_adra_ros_wrapper_generate_messages octo_adra_ros_wrapper_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg/TargetValue.msg" NAME_WE)
+get_filename_component(_filename "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/srv/SetMode.srv" NAME_WE)
 add_dependencies(octo_adra_ros_wrapper_generate_messages_lisp _octo_adra_ros_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/srv/SetMode.srv" NAME_WE)
+get_filename_component(_filename "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg/TargetValue.msg" NAME_WE)
 add_dependencies(octo_adra_ros_wrapper_generate_messages_lisp _octo_adra_ros_wrapper_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -157,7 +157,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS octo_adra_ros_wrapper_generate_mess
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(octo_adra_ros_wrapper
-  "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg/TargetValue.msg"
+  "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg/TargetValue.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/octo_adra_ros_wrapper
@@ -165,7 +165,7 @@ _generate_msg_nodejs(octo_adra_ros_wrapper
 
 ### Generating Services
 _generate_srv_nodejs(octo_adra_ros_wrapper
-  "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/srv/SetMode.srv"
+  "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/srv/SetMode.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/octo_adra_ros_wrapper
@@ -183,9 +183,9 @@ add_custom_target(octo_adra_ros_wrapper_generate_messages_nodejs
 add_dependencies(octo_adra_ros_wrapper_generate_messages octo_adra_ros_wrapper_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg/TargetValue.msg" NAME_WE)
+get_filename_component(_filename "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/srv/SetMode.srv" NAME_WE)
 add_dependencies(octo_adra_ros_wrapper_generate_messages_nodejs _octo_adra_ros_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/srv/SetMode.srv" NAME_WE)
+get_filename_component(_filename "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg/TargetValue.msg" NAME_WE)
 add_dependencies(octo_adra_ros_wrapper_generate_messages_nodejs _octo_adra_ros_wrapper_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -198,7 +198,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS octo_adra_ros_wrapper_generate_mess
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(octo_adra_ros_wrapper
-  "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg/TargetValue.msg"
+  "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg/TargetValue.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/octo_adra_ros_wrapper
@@ -206,7 +206,7 @@ _generate_msg_py(octo_adra_ros_wrapper
 
 ### Generating Services
 _generate_srv_py(octo_adra_ros_wrapper
-  "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/srv/SetMode.srv"
+  "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/srv/SetMode.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/octo_adra_ros_wrapper
@@ -224,9 +224,9 @@ add_custom_target(octo_adra_ros_wrapper_generate_messages_py
 add_dependencies(octo_adra_ros_wrapper_generate_messages octo_adra_ros_wrapper_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg/TargetValue.msg" NAME_WE)
+get_filename_component(_filename "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/srv/SetMode.srv" NAME_WE)
 add_dependencies(octo_adra_ros_wrapper_generate_messages_py _octo_adra_ros_wrapper_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/srv/SetMode.srv" NAME_WE)
+get_filename_component(_filename "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg/TargetValue.msg" NAME_WE)
 add_dependencies(octo_adra_ros_wrapper_generate_messages_py _octo_adra_ros_wrapper_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

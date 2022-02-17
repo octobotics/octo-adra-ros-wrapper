@@ -53,10 +53,10 @@ RM = /snap/clion/180/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper
+CMAKE_SOURCE_DIR = /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug
+CMAKE_BINARY_DIR = /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include utapi/CMakeFiles/utapi.dir/depend.make
@@ -72,212 +72,212 @@ include utapi/CMakeFiles/utapi.dir/flags.make
 utapi/CMakeFiles/utapi.dir/common/network.cpp.o: utapi/CMakeFiles/utapi.dir/flags.make
 utapi/CMakeFiles/utapi.dir/common/network.cpp.o: ../utapi/common/network.cpp
 utapi/CMakeFiles/utapi.dir/common/network.cpp.o: utapi/CMakeFiles/utapi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object utapi/CMakeFiles/utapi.dir/common/network.cpp.o"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/common/network.cpp.o -MF CMakeFiles/utapi.dir/common/network.cpp.o.d -o CMakeFiles/utapi.dir/common/network.cpp.o -c /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/common/network.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object utapi/CMakeFiles/utapi.dir/common/network.cpp.o"
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/common/network.cpp.o -MF CMakeFiles/utapi.dir/common/network.cpp.o.d -o CMakeFiles/utapi.dir/common/network.cpp.o -c /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/common/network.cpp
 
 utapi/CMakeFiles/utapi.dir/common/network.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utapi.dir/common/network.cpp.i"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/common/network.cpp > CMakeFiles/utapi.dir/common/network.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/common/network.cpp > CMakeFiles/utapi.dir/common/network.cpp.i
 
 utapi/CMakeFiles/utapi.dir/common/network.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utapi.dir/common/network.cpp.s"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/common/network.cpp -o CMakeFiles/utapi.dir/common/network.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/common/network.cpp -o CMakeFiles/utapi.dir/common/network.cpp.s
 
 utapi/CMakeFiles/utapi.dir/common/preempt_rt.cpp.o: utapi/CMakeFiles/utapi.dir/flags.make
 utapi/CMakeFiles/utapi.dir/common/preempt_rt.cpp.o: ../utapi/common/preempt_rt.cpp
 utapi/CMakeFiles/utapi.dir/common/preempt_rt.cpp.o: utapi/CMakeFiles/utapi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object utapi/CMakeFiles/utapi.dir/common/preempt_rt.cpp.o"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/common/preempt_rt.cpp.o -MF CMakeFiles/utapi.dir/common/preempt_rt.cpp.o.d -o CMakeFiles/utapi.dir/common/preempt_rt.cpp.o -c /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/common/preempt_rt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object utapi/CMakeFiles/utapi.dir/common/preempt_rt.cpp.o"
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/common/preempt_rt.cpp.o -MF CMakeFiles/utapi.dir/common/preempt_rt.cpp.o.d -o CMakeFiles/utapi.dir/common/preempt_rt.cpp.o -c /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/common/preempt_rt.cpp
 
 utapi/CMakeFiles/utapi.dir/common/preempt_rt.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utapi.dir/common/preempt_rt.cpp.i"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/common/preempt_rt.cpp > CMakeFiles/utapi.dir/common/preempt_rt.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/common/preempt_rt.cpp > CMakeFiles/utapi.dir/common/preempt_rt.cpp.i
 
 utapi/CMakeFiles/utapi.dir/common/preempt_rt.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utapi.dir/common/preempt_rt.cpp.s"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/common/preempt_rt.cpp -o CMakeFiles/utapi.dir/common/preempt_rt.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/common/preempt_rt.cpp -o CMakeFiles/utapi.dir/common/preempt_rt.cpp.s
 
 utapi/CMakeFiles/utapi.dir/common/socket_serial.cpp.o: utapi/CMakeFiles/utapi.dir/flags.make
 utapi/CMakeFiles/utapi.dir/common/socket_serial.cpp.o: ../utapi/common/socket_serial.cpp
 utapi/CMakeFiles/utapi.dir/common/socket_serial.cpp.o: utapi/CMakeFiles/utapi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object utapi/CMakeFiles/utapi.dir/common/socket_serial.cpp.o"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/common/socket_serial.cpp.o -MF CMakeFiles/utapi.dir/common/socket_serial.cpp.o.d -o CMakeFiles/utapi.dir/common/socket_serial.cpp.o -c /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/common/socket_serial.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object utapi/CMakeFiles/utapi.dir/common/socket_serial.cpp.o"
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/common/socket_serial.cpp.o -MF CMakeFiles/utapi.dir/common/socket_serial.cpp.o.d -o CMakeFiles/utapi.dir/common/socket_serial.cpp.o -c /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/common/socket_serial.cpp
 
 utapi/CMakeFiles/utapi.dir/common/socket_serial.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utapi.dir/common/socket_serial.cpp.i"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/common/socket_serial.cpp > CMakeFiles/utapi.dir/common/socket_serial.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/common/socket_serial.cpp > CMakeFiles/utapi.dir/common/socket_serial.cpp.i
 
 utapi/CMakeFiles/utapi.dir/common/socket_serial.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utapi.dir/common/socket_serial.cpp.s"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/common/socket_serial.cpp -o CMakeFiles/utapi.dir/common/socket_serial.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/common/socket_serial.cpp -o CMakeFiles/utapi.dir/common/socket_serial.cpp.s
 
 utapi/CMakeFiles/utapi.dir/common/socket_tcp.cpp.o: utapi/CMakeFiles/utapi.dir/flags.make
 utapi/CMakeFiles/utapi.dir/common/socket_tcp.cpp.o: ../utapi/common/socket_tcp.cpp
 utapi/CMakeFiles/utapi.dir/common/socket_tcp.cpp.o: utapi/CMakeFiles/utapi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object utapi/CMakeFiles/utapi.dir/common/socket_tcp.cpp.o"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/common/socket_tcp.cpp.o -MF CMakeFiles/utapi.dir/common/socket_tcp.cpp.o.d -o CMakeFiles/utapi.dir/common/socket_tcp.cpp.o -c /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/common/socket_tcp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object utapi/CMakeFiles/utapi.dir/common/socket_tcp.cpp.o"
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/common/socket_tcp.cpp.o -MF CMakeFiles/utapi.dir/common/socket_tcp.cpp.o.d -o CMakeFiles/utapi.dir/common/socket_tcp.cpp.o -c /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/common/socket_tcp.cpp
 
 utapi/CMakeFiles/utapi.dir/common/socket_tcp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utapi.dir/common/socket_tcp.cpp.i"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/common/socket_tcp.cpp > CMakeFiles/utapi.dir/common/socket_tcp.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/common/socket_tcp.cpp > CMakeFiles/utapi.dir/common/socket_tcp.cpp.i
 
 utapi/CMakeFiles/utapi.dir/common/socket_tcp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utapi.dir/common/socket_tcp.cpp.s"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/common/socket_tcp.cpp -o CMakeFiles/utapi.dir/common/socket_tcp.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/common/socket_tcp.cpp -o CMakeFiles/utapi.dir/common/socket_tcp.cpp.s
 
 utapi/CMakeFiles/utapi.dir/base/servo_api_base.cpp.o: utapi/CMakeFiles/utapi.dir/flags.make
 utapi/CMakeFiles/utapi.dir/base/servo_api_base.cpp.o: ../utapi/base/servo_api_base.cpp
 utapi/CMakeFiles/utapi.dir/base/servo_api_base.cpp.o: utapi/CMakeFiles/utapi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object utapi/CMakeFiles/utapi.dir/base/servo_api_base.cpp.o"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/base/servo_api_base.cpp.o -MF CMakeFiles/utapi.dir/base/servo_api_base.cpp.o.d -o CMakeFiles/utapi.dir/base/servo_api_base.cpp.o -c /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/base/servo_api_base.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object utapi/CMakeFiles/utapi.dir/base/servo_api_base.cpp.o"
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/base/servo_api_base.cpp.o -MF CMakeFiles/utapi.dir/base/servo_api_base.cpp.o.d -o CMakeFiles/utapi.dir/base/servo_api_base.cpp.o -c /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/base/servo_api_base.cpp
 
 utapi/CMakeFiles/utapi.dir/base/servo_api_base.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utapi.dir/base/servo_api_base.cpp.i"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/base/servo_api_base.cpp > CMakeFiles/utapi.dir/base/servo_api_base.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/base/servo_api_base.cpp > CMakeFiles/utapi.dir/base/servo_api_base.cpp.i
 
 utapi/CMakeFiles/utapi.dir/base/servo_api_base.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utapi.dir/base/servo_api_base.cpp.s"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/base/servo_api_base.cpp -o CMakeFiles/utapi.dir/base/servo_api_base.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/base/servo_api_base.cpp -o CMakeFiles/utapi.dir/base/servo_api_base.cpp.s
 
 utapi/CMakeFiles/utapi.dir/adra/adra_api_base.cpp.o: utapi/CMakeFiles/utapi.dir/flags.make
 utapi/CMakeFiles/utapi.dir/adra/adra_api_base.cpp.o: ../utapi/adra/adra_api_base.cpp
 utapi/CMakeFiles/utapi.dir/adra/adra_api_base.cpp.o: utapi/CMakeFiles/utapi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object utapi/CMakeFiles/utapi.dir/adra/adra_api_base.cpp.o"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/adra/adra_api_base.cpp.o -MF CMakeFiles/utapi.dir/adra/adra_api_base.cpp.o.d -o CMakeFiles/utapi.dir/adra/adra_api_base.cpp.o -c /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/adra/adra_api_base.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object utapi/CMakeFiles/utapi.dir/adra/adra_api_base.cpp.o"
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/adra/adra_api_base.cpp.o -MF CMakeFiles/utapi.dir/adra/adra_api_base.cpp.o.d -o CMakeFiles/utapi.dir/adra/adra_api_base.cpp.o -c /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/adra/adra_api_base.cpp
 
 utapi/CMakeFiles/utapi.dir/adra/adra_api_base.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utapi.dir/adra/adra_api_base.cpp.i"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/adra/adra_api_base.cpp > CMakeFiles/utapi.dir/adra/adra_api_base.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/adra/adra_api_base.cpp > CMakeFiles/utapi.dir/adra/adra_api_base.cpp.i
 
 utapi/CMakeFiles/utapi.dir/adra/adra_api_base.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utapi.dir/adra/adra_api_base.cpp.s"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/adra/adra_api_base.cpp -o CMakeFiles/utapi.dir/adra/adra_api_base.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/adra/adra_api_base.cpp -o CMakeFiles/utapi.dir/adra/adra_api_base.cpp.s
 
 utapi/CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.o: utapi/CMakeFiles/utapi.dir/flags.make
 utapi/CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.o: ../utapi/adra/adra_api_serial.cpp
 utapi/CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.o: utapi/CMakeFiles/utapi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object utapi/CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.o"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.o -MF CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.o.d -o CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.o -c /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/adra/adra_api_serial.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object utapi/CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.o"
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.o -MF CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.o.d -o CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.o -c /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/adra/adra_api_serial.cpp
 
 utapi/CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.i"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/adra/adra_api_serial.cpp > CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/adra/adra_api_serial.cpp > CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.i
 
 utapi/CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.s"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/adra/adra_api_serial.cpp -o CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/adra/adra_api_serial.cpp -o CMakeFiles/utapi.dir/adra/adra_api_serial.cpp.s
 
 utapi/CMakeFiles/utapi.dir/base/arm_api_base.cpp.o: utapi/CMakeFiles/utapi.dir/flags.make
 utapi/CMakeFiles/utapi.dir/base/arm_api_base.cpp.o: ../utapi/base/arm_api_base.cpp
 utapi/CMakeFiles/utapi.dir/base/arm_api_base.cpp.o: utapi/CMakeFiles/utapi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object utapi/CMakeFiles/utapi.dir/base/arm_api_base.cpp.o"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/base/arm_api_base.cpp.o -MF CMakeFiles/utapi.dir/base/arm_api_base.cpp.o.d -o CMakeFiles/utapi.dir/base/arm_api_base.cpp.o -c /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/base/arm_api_base.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object utapi/CMakeFiles/utapi.dir/base/arm_api_base.cpp.o"
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/base/arm_api_base.cpp.o -MF CMakeFiles/utapi.dir/base/arm_api_base.cpp.o.d -o CMakeFiles/utapi.dir/base/arm_api_base.cpp.o -c /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/base/arm_api_base.cpp
 
 utapi/CMakeFiles/utapi.dir/base/arm_api_base.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utapi.dir/base/arm_api_base.cpp.i"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/base/arm_api_base.cpp > CMakeFiles/utapi.dir/base/arm_api_base.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/base/arm_api_base.cpp > CMakeFiles/utapi.dir/base/arm_api_base.cpp.i
 
 utapi/CMakeFiles/utapi.dir/base/arm_api_base.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utapi.dir/base/arm_api_base.cpp.s"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/base/arm_api_base.cpp -o CMakeFiles/utapi.dir/base/arm_api_base.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/base/arm_api_base.cpp -o CMakeFiles/utapi.dir/base/arm_api_base.cpp.s
 
 utapi/CMakeFiles/utapi.dir/base/arm_report_status.cpp.o: utapi/CMakeFiles/utapi.dir/flags.make
 utapi/CMakeFiles/utapi.dir/base/arm_report_status.cpp.o: ../utapi/base/arm_report_status.cpp
 utapi/CMakeFiles/utapi.dir/base/arm_report_status.cpp.o: utapi/CMakeFiles/utapi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object utapi/CMakeFiles/utapi.dir/base/arm_report_status.cpp.o"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/base/arm_report_status.cpp.o -MF CMakeFiles/utapi.dir/base/arm_report_status.cpp.o.d -o CMakeFiles/utapi.dir/base/arm_report_status.cpp.o -c /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/base/arm_report_status.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object utapi/CMakeFiles/utapi.dir/base/arm_report_status.cpp.o"
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/base/arm_report_status.cpp.o -MF CMakeFiles/utapi.dir/base/arm_report_status.cpp.o.d -o CMakeFiles/utapi.dir/base/arm_report_status.cpp.o -c /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/base/arm_report_status.cpp
 
 utapi/CMakeFiles/utapi.dir/base/arm_report_status.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utapi.dir/base/arm_report_status.cpp.i"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/base/arm_report_status.cpp > CMakeFiles/utapi.dir/base/arm_report_status.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/base/arm_report_status.cpp > CMakeFiles/utapi.dir/base/arm_report_status.cpp.i
 
 utapi/CMakeFiles/utapi.dir/base/arm_report_status.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utapi.dir/base/arm_report_status.cpp.s"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/base/arm_report_status.cpp -o CMakeFiles/utapi.dir/base/arm_report_status.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/base/arm_report_status.cpp -o CMakeFiles/utapi.dir/base/arm_report_status.cpp.s
 
 utapi/CMakeFiles/utapi.dir/base/arm_report_config.cpp.o: utapi/CMakeFiles/utapi.dir/flags.make
 utapi/CMakeFiles/utapi.dir/base/arm_report_config.cpp.o: ../utapi/base/arm_report_config.cpp
 utapi/CMakeFiles/utapi.dir/base/arm_report_config.cpp.o: utapi/CMakeFiles/utapi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object utapi/CMakeFiles/utapi.dir/base/arm_report_config.cpp.o"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/base/arm_report_config.cpp.o -MF CMakeFiles/utapi.dir/base/arm_report_config.cpp.o.d -o CMakeFiles/utapi.dir/base/arm_report_config.cpp.o -c /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/base/arm_report_config.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object utapi/CMakeFiles/utapi.dir/base/arm_report_config.cpp.o"
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/base/arm_report_config.cpp.o -MF CMakeFiles/utapi.dir/base/arm_report_config.cpp.o.d -o CMakeFiles/utapi.dir/base/arm_report_config.cpp.o -c /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/base/arm_report_config.cpp
 
 utapi/CMakeFiles/utapi.dir/base/arm_report_config.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utapi.dir/base/arm_report_config.cpp.i"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/base/arm_report_config.cpp > CMakeFiles/utapi.dir/base/arm_report_config.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/base/arm_report_config.cpp > CMakeFiles/utapi.dir/base/arm_report_config.cpp.i
 
 utapi/CMakeFiles/utapi.dir/base/arm_report_config.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utapi.dir/base/arm_report_config.cpp.s"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/base/arm_report_config.cpp -o CMakeFiles/utapi.dir/base/arm_report_config.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/base/arm_report_config.cpp -o CMakeFiles/utapi.dir/base/arm_report_config.cpp.s
 
 utapi/CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.o: utapi/CMakeFiles/utapi.dir/flags.make
 utapi/CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.o: ../utapi/utra/utra_api_tcp.cpp
 utapi/CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.o: utapi/CMakeFiles/utapi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object utapi/CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.o"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.o -MF CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.o.d -o CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.o -c /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/utra/utra_api_tcp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object utapi/CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.o"
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.o -MF CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.o.d -o CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.o -c /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/utra/utra_api_tcp.cpp
 
 utapi/CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.i"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/utra/utra_api_tcp.cpp > CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/utra/utra_api_tcp.cpp > CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.i
 
 utapi/CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.s"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/utra/utra_api_tcp.cpp -o CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/utra/utra_api_tcp.cpp -o CMakeFiles/utapi.dir/utra/utra_api_tcp.cpp.s
 
 utapi/CMakeFiles/utapi.dir/utra/utra_report_status.cpp.o: utapi/CMakeFiles/utapi.dir/flags.make
 utapi/CMakeFiles/utapi.dir/utra/utra_report_status.cpp.o: ../utapi/utra/utra_report_status.cpp
 utapi/CMakeFiles/utapi.dir/utra/utra_report_status.cpp.o: utapi/CMakeFiles/utapi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object utapi/CMakeFiles/utapi.dir/utra/utra_report_status.cpp.o"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/utra/utra_report_status.cpp.o -MF CMakeFiles/utapi.dir/utra/utra_report_status.cpp.o.d -o CMakeFiles/utapi.dir/utra/utra_report_status.cpp.o -c /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/utra/utra_report_status.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object utapi/CMakeFiles/utapi.dir/utra/utra_report_status.cpp.o"
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/utra/utra_report_status.cpp.o -MF CMakeFiles/utapi.dir/utra/utra_report_status.cpp.o.d -o CMakeFiles/utapi.dir/utra/utra_report_status.cpp.o -c /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/utra/utra_report_status.cpp
 
 utapi/CMakeFiles/utapi.dir/utra/utra_report_status.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utapi.dir/utra/utra_report_status.cpp.i"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/utra/utra_report_status.cpp > CMakeFiles/utapi.dir/utra/utra_report_status.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/utra/utra_report_status.cpp > CMakeFiles/utapi.dir/utra/utra_report_status.cpp.i
 
 utapi/CMakeFiles/utapi.dir/utra/utra_report_status.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utapi.dir/utra/utra_report_status.cpp.s"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/utra/utra_report_status.cpp -o CMakeFiles/utapi.dir/utra/utra_report_status.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/utra/utra_report_status.cpp -o CMakeFiles/utapi.dir/utra/utra_report_status.cpp.s
 
 utapi/CMakeFiles/utapi.dir/utra/utra_report_config.cpp.o: utapi/CMakeFiles/utapi.dir/flags.make
 utapi/CMakeFiles/utapi.dir/utra/utra_report_config.cpp.o: ../utapi/utra/utra_report_config.cpp
 utapi/CMakeFiles/utapi.dir/utra/utra_report_config.cpp.o: utapi/CMakeFiles/utapi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object utapi/CMakeFiles/utapi.dir/utra/utra_report_config.cpp.o"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/utra/utra_report_config.cpp.o -MF CMakeFiles/utapi.dir/utra/utra_report_config.cpp.o.d -o CMakeFiles/utapi.dir/utra/utra_report_config.cpp.o -c /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/utra/utra_report_config.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object utapi/CMakeFiles/utapi.dir/utra/utra_report_config.cpp.o"
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/utra/utra_report_config.cpp.o -MF CMakeFiles/utapi.dir/utra/utra_report_config.cpp.o.d -o CMakeFiles/utapi.dir/utra/utra_report_config.cpp.o -c /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/utra/utra_report_config.cpp
 
 utapi/CMakeFiles/utapi.dir/utra/utra_report_config.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utapi.dir/utra/utra_report_config.cpp.i"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/utra/utra_report_config.cpp > CMakeFiles/utapi.dir/utra/utra_report_config.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/utra/utra_report_config.cpp > CMakeFiles/utapi.dir/utra/utra_report_config.cpp.i
 
 utapi/CMakeFiles/utapi.dir/utra/utra_report_config.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utapi.dir/utra/utra_report_config.cpp.s"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/utra/utra_report_config.cpp -o CMakeFiles/utapi.dir/utra/utra_report_config.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/utra/utra_report_config.cpp -o CMakeFiles/utapi.dir/utra/utra_report_config.cpp.s
 
 utapi/CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.o: utapi/CMakeFiles/utapi.dir/flags.make
 utapi/CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.o: ../utapi/utra/utra_flxie_api.cpp
 utapi/CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.o: utapi/CMakeFiles/utapi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object utapi/CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.o"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.o -MF CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.o.d -o CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.o -c /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/utra/utra_flxie_api.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object utapi/CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.o"
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.o -MF CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.o.d -o CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.o -c /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/utra/utra_flxie_api.cpp
 
 utapi/CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.i"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/utra/utra_flxie_api.cpp > CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/utra/utra_flxie_api.cpp > CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.i
 
 utapi/CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.s"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/utra/utra_flxie_api.cpp -o CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/utra/utra_flxie_api.cpp -o CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.s
 
 utapi/CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.o: utapi/CMakeFiles/utapi.dir/flags.make
 utapi/CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.o: ../utapi/utra/utra_flxiv_api.cpp
 utapi/CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.o: utapi/CMakeFiles/utapi.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object utapi/CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.o"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.o -MF CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.o.d -o CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.o -c /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/utra/utra_flxiv_api.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object utapi/CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.o"
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utapi/CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.o -MF CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.o.d -o CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.o -c /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/utra/utra_flxiv_api.cpp
 
 utapi/CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.i"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/utra/utra_flxiv_api.cpp > CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.i
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/utra/utra_flxiv_api.cpp > CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.i
 
 utapi/CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.s"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi/utra/utra_flxiv_api.cpp -o CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.s
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && /usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi/utra/utra_flxiv_api.cpp -o CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.s
 
 # Object files for target utapi
 utapi_OBJECTS = \
@@ -317,19 +317,19 @@ devel/lib/libutapi.a: utapi/CMakeFiles/utapi.dir/utra/utra_flxie_api.cpp.o
 devel/lib/libutapi.a: utapi/CMakeFiles/utapi.dir/utra/utra_flxiv_api.cpp.o
 devel/lib/libutapi.a: utapi/CMakeFiles/utapi.dir/build.make
 devel/lib/libutapi.a: utapi/CMakeFiles/utapi.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX static library ../devel/lib/libutapi.a"
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && $(CMAKE_COMMAND) -P CMakeFiles/utapi.dir/cmake_clean_target.cmake
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/utapi.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX static library ../devel/lib/libutapi.a"
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && $(CMAKE_COMMAND) -P CMakeFiles/utapi.dir/cmake_clean_target.cmake
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/utapi.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 utapi/CMakeFiles/utapi.dir/build: devel/lib/libutapi.a
 .PHONY : utapi/CMakeFiles/utapi.dir/build
 
 utapi/CMakeFiles/utapi.dir/clean:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && $(CMAKE_COMMAND) -P CMakeFiles/utapi.dir/cmake_clean.cmake
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi && $(CMAKE_COMMAND) -P CMakeFiles/utapi.dir/cmake_clean.cmake
 .PHONY : utapi/CMakeFiles/utapi.dir/clean
 
 utapi/CMakeFiles/utapi.dir/depend:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/utapi /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/utapi/CMakeFiles/utapi.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/utapi /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/utapi/CMakeFiles/utapi.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : utapi/CMakeFiles/utapi.dir/depend
 

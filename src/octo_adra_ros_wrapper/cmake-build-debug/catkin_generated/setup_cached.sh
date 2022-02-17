@@ -7,9 +7,10 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel/lib:$LD_LIBRARY_PATH"
+export CMAKE_PREFIX_PATH="/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel/lib:$LD_LIBRARY_PATH"
 export PATH='/opt/ros/melodic/bin:/usr/lib/ccache:/home/octobotics/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/octobotics/software/ardupilot/Tools/autotest'
-export PKG_CONFIG_PATH="/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
-export ROSLISP_PACKAGE_DIRECTORIES='/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel/share/common-lisp'
-export ROS_PACKAGE_PATH='/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper:/opt/ros/melodic/share'
+export PKG_CONFIG_PATH="/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PYTHONPATH="/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel/lib/python2.7/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES='/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel/share/common-lisp'
+export ROS_PACKAGE_PATH='/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper:/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper:/opt/ros/melodic/share'

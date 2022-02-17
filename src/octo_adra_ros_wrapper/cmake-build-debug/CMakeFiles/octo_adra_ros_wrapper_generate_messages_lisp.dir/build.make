@@ -53,10 +53,10 @@ RM = /snap/clion/180/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper
+CMAKE_SOURCE_DIR = /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug
+CMAKE_BINARY_DIR = /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug
 
 # Utility rule file for octo_adra_ros_wrapper_generate_messages_lisp.
 
@@ -71,13 +71,13 @@ CMakeFiles/octo_adra_ros_wrapper_generate_messages_lisp: devel/share/common-lisp
 
 devel/share/common-lisp/ros/octo_adra_ros_wrapper/msg/TargetValue.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
 devel/share/common-lisp/ros/octo_adra_ros_wrapper/msg/TargetValue.lisp: ../msg/TargetValue.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from octo_adra_ros_wrapper/TargetValue.msg"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg/TargetValue.msg -Iocto_adra_ros_wrapper:/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p octo_adra_ros_wrapper -o /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel/share/common-lisp/ros/octo_adra_ros_wrapper/msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from octo_adra_ros_wrapper/TargetValue.msg"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg/TargetValue.msg -Iocto_adra_ros_wrapper:/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p octo_adra_ros_wrapper -o /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel/share/common-lisp/ros/octo_adra_ros_wrapper/msg
 
 devel/share/common-lisp/ros/octo_adra_ros_wrapper/srv/SetMode.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
 devel/share/common-lisp/ros/octo_adra_ros_wrapper/srv/SetMode.lisp: ../srv/SetMode.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from octo_adra_ros_wrapper/SetMode.srv"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/srv/SetMode.srv -Iocto_adra_ros_wrapper:/home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p octo_adra_ros_wrapper -o /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/devel/share/common-lisp/ros/octo_adra_ros_wrapper/srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from octo_adra_ros_wrapper/SetMode.srv"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/srv/SetMode.srv -Iocto_adra_ros_wrapper:/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p octo_adra_ros_wrapper -o /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel/share/common-lisp/ros/octo_adra_ros_wrapper/srv
 
 octo_adra_ros_wrapper_generate_messages_lisp: CMakeFiles/octo_adra_ros_wrapper_generate_messages_lisp
 octo_adra_ros_wrapper_generate_messages_lisp: devel/share/common-lisp/ros/octo_adra_ros_wrapper/msg/TargetValue.lisp
@@ -94,6 +94,6 @@ CMakeFiles/octo_adra_ros_wrapper_generate_messages_lisp.dir/clean:
 .PHONY : CMakeFiles/octo_adra_ros_wrapper_generate_messages_lisp.dir/clean
 
 CMakeFiles/octo_adra_ros_wrapper_generate_messages_lisp.dir/depend:
-	cd /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug /home/octobotics/octobotics_ws/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles/octo_adra_ros_wrapper_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles/octo_adra_ros_wrapper_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/octo_adra_ros_wrapper_generate_messages_lisp.dir/depend
 
