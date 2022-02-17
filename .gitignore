@@ -49,3 +49,5 @@ qtcreator-*
 
 # Catkin custom files
 CATKIN_IGNORE
+
+/src/octo_adra_ros_wrapper/cmake-build-debug/
