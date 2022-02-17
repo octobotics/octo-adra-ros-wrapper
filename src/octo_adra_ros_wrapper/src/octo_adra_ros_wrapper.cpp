@@ -102,17 +102,20 @@ void AdraRosWrapper::init_subs_pubs_srvs() {
      */
 
     /// subscribers
-    sub_cmd_vel_ = nh_.subscribe("/cmd_vel", 1, &AdraRosWrapper::cmd_vel_callback_, this);
-    sub_cmd_pose_ = nh_.subscribe("/cmd_pose", 1, &AdraRosWrapper::cmd_pose_callback_, this);
+    sub_cmd_vel_ = nh_.subscribe("/octo_adra_ros/cmd_vel", 1, &AdraRosWrapper::cmd_vel_callback_, this);
+    sub_cmd_pose_ = nh_.subscribe("/octo_adra_ros/cmd_pose", 1, &AdraRosWrapper::cmd_pose_callback_, this);
 
     /// services
-    set_command_mode_srv_ = nh_.advertiseService("/set_mode", &AdraRosWrapper::set_command_mode_srv_callback_, this);
-    enable_actuators_srv_ = nh_.advertiseService("/enable_actuators", &AdraRosWrapper::enable_actuators_srv_callback_,
-                                                 this);
-    disable_actuators_srv_ = nh_.advertiseService("/disable_actuators",
+    set_command_mode_srv_ = nh_.advertiseService("/octo_adra_ros/set_mode",
+                                                 &AdraRosWrapper::set_command_mode_srv_callback_, this);
+    enable_actuators_srv_ = nh_.advertiseService("/octo_adra_ros/enable_actuators",
+                                                 &AdraRosWrapper::enable_actuators_srv_callback_,this);
+    disable_actuators_srv_ = nh_.advertiseService("/octo_adra_ros/disable_actuators",
                                                   &AdraRosWrapper::disable_actuators_srv_callback_, this);
-    enable_brakes_srv_ = nh_.advertiseService("/enable_brakes", &AdraRosWrapper::enable_brakes_srv_callback_, this);
-    disable_brakes_srv_ = nh_.advertiseService("/disable_brakes", &AdraRosWrapper::disable_brakes_srv_callback_, this);
+    enable_brakes_srv_ = nh_.advertiseService("/octo_adra_ros/enable_brakes",
+                                              &AdraRosWrapper::enable_brakes_srv_callback_, this);
+    disable_brakes_srv_ = nh_.advertiseService("/octo_adra_ros/disable_brakes",
+                                               &AdraRosWrapper::disable_brakes_srv_callback_, this);
 }
 
 bool AdraRosWrapper::enable_actuators_srv_callback_(std_srvs::Trigger::Request &req, std_srvs::Trigger::Response &res) {
@@ -283,7 +286,7 @@ void AdraRosWrapper::cmd_vel_callback_(const octo_adra_ros_wrapper::TargetValue:
     if (mode_ == ActuatorControlMode::VELOCITY) {
         int id = msg->id;
         double value = msg->value;
-        int ret = adra_api_->set_vel_target(id, (float)value);
+        int ret = adra_api_->set_vel_target(id, (float) value);
         if (ret != 0) {
             if (debug_) {
                 ROS_ERROR("%s Actuator %d set target failed", log_header_.c_str(), id);
@@ -302,7 +305,7 @@ void AdraRosWrapper::cmd_pose_callback_(const octo_adra_ros_wrapper::TargetValue
     if (mode_ == ActuatorControlMode::POSITION) {
         int id = msg->id;
         double value = msg->value;
-        int ret = adra_api_->set_pos_target(id, (float)value);
+        int ret = adra_api_->set_pos_target(id, (float) value);
         if (ret != 0) {
             if (debug_) {
                 ROS_ERROR("%s Actuator %d set target failed", log_header_.c_str(), id);
