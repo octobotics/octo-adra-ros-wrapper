@@ -4,11 +4,13 @@
     <arg name="debug" default="false"/>
     <arg name="com_port" default="/dev/ttyUSB0"/>
     <arg name="baud_rate" default="921600"/>
+    <arg name="publish_rate" default="10.0"/>
 
     <node pkg="octo_adra_ros_wrapper" type="octo_adra_ros" name="octo_adra_ros" output="screen">
         <param name="ids" value="$(arg ids)"/>
         <param name="debug" value="$(arg debug)"/>
         <param name="com_port" value="$(arg com_port)"/>
         <param name="baud_rate" value="$(arg baud_rate)"/>
+        <param name="publish_rate" value="$(arg publish_rate)"/>
     </node>
 </launch>
