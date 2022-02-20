@@ -18,6 +18,7 @@ Author: Yogesh Phalak
 #include "std_srvs/Trigger.h"
 #include "octo_adra_ros_wrapper/SetMode.h"
 #include "octo_adra_ros_wrapper/TargetValue.h"
+#include "octo_adra_ros_wrapper/ActuatorStatus.h"
 
 #ifndef OCTOBOTICS_WS_OCTO_ADRA_ROS_WRAPPER_H
 #define OCTOBOTICS_WS_OCTO_ADRA_ROS_WRAPPER_H
@@ -60,6 +61,13 @@ public:
      */
     void init_subs_pubs_srvs();
 
+	/**
+	 * @brief publish the status of all the ids of the actuator
+	 * @param ros::TimerEvent
+	 * @return none
+	 */
+	void pub_actuator_status(const ros::TimerEvent &);
+
 private:
     /// node specific properties
     std::string log_header_;
@@ -72,9 +80,13 @@ private:
     std::string com_port_;
     int baud_rate_;
     std::vector<int> ids_;
+	double publish_rate_ = 10.0;
 
     /// object of adra api
     AdraApiSerial *adra_api_;
+
+	///Publishers
+	ros::Publisher pub_actuator_status_;
 
     /// subscribers
     ros::Subscriber sub_cmd_vel_;
@@ -90,6 +102,9 @@ private:
     ros::ServiceServer enable_brakes_srv_;
     ros::ServiceServer disable_brakes_srv_;
     ros::ServiceServer set_command_mode_srv_;
+
+	///ROS Timer
+	ros::Timer update_timer_;
 
     /// control mode state
     ActuatorControlMode mode_;
