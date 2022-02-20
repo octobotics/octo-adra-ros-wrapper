@@ -1,0 +1,13 @@
+int64 id
+float64 pos_limit_min
+float64 pos_limit_max
+float64 pos_limit_diff
+float64 vel_limit_min
+float64 vel_limit_max
+float64 vel_limit_diff
+float64 tau_limit_min
+float64 tau_limit_max
+float64 tau_limit_diff
+---
+bool success
+int64[] response

@@ -126,6 +126,8 @@ void AdraRosWrapper::init_subs_pubs_srvs() {
                                               &AdraRosWrapper::enable_brakes_srv_callback_, this);
     disable_brakes_srv_ = nh_.advertiseService("/octo_adra_ros/disable_brakes",
                                                &AdraRosWrapper::disable_brakes_srv_callback_, this);
+	set_actuator_limits_srv_ = nh_.advertiseService("/octo_adra_ros/set_actuator_limits",
+                                               &AdraRosWrapper::set_actuator_limits_srv_callback_, this);
 
 	///ROS Timer
 	update_timer_ = nh_.createTimer(ros::Duration(1.0 / publish_rate_), &AdraRosWrapper::pub_actuator_status, this);
@@ -289,6 +291,43 @@ bool AdraRosWrapper::set_command_mode_srv_callback_(octo_adra_ros_wrapper::SetMo
     }
 
     return true;
+}
+
+bool AdraRosWrapper::set_actuator_limits_srv_callback_(octo_adra_ros_wrapper::SetLimits::Request &req,
+                                        octo_adra_ros_wrapper::SetLimits::Response &res){
+	/**
+     * @brief Service call to set pos, vel and tau limits of the actuator
+     * @param req - octo_adra_ros_wrapper::SetMode::Request
+     * @param res - octo_adra_ros_wrapper::SetMode::Response
+     * @return bool - true if success
+     */
+
+	// Position Limits (min, max, diff)
+	res.response.push_back(adra_api_->set_pos_limit_min(req.id, req.pos_limit_min));
+	res.response.push_back(adra_api_->set_pos_limit_max(req.id, req.pos_limit_max));
+	res.response.push_back(adra_api_->set_pos_limit_diff(req.id, req.pos_limit_diff));
+
+	// Velocity Limits (min, max, diff)
+	res.response.push_back(adra_api_->set_vel_limit_min(req.id, req.vel_limit_min));
+	res.response.push_back(adra_api_->set_vel_limit_max(req.id, req.vel_limit_max));
+	res.response.push_back(adra_api_->set_vel_limit_diff(req.id, req.vel_limit_diff));
+
+	// Effort Limits (min, max, diff)
+	res.response.push_back(adra_api_->set_tau_limit_min(req.id, req.tau_limit_min));
+	res.response.push_back(adra_api_->set_tau_limit_max(req.id, req.tau_limit_diff));
+	res.response.push_back(adra_api_->set_tau_limit_diff(req.id, req.tau_limit_diff));
+
+	for (int val : res.response){
+		if (val != 0){
+			res.success = false;
+			ROS_ERROR("Setting the limits failed");
+			return false;
+		}
+	}
+	ROS_INFO("All the limits have been set successfully");
+
+	return true;
+
 }
 
 void AdraRosWrapper::cmd_vel_callback_(const octo_adra_ros_wrapper::TargetValue::ConstPtr &msg) {
