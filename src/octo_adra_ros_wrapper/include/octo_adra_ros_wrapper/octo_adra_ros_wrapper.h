@@ -18,6 +18,8 @@ Author: Yogesh Phalak
 #include "std_srvs/Trigger.h"
 #include "octo_adra_ros_wrapper/SetMode.h"
 #include "octo_adra_ros_wrapper/SetLimits.h"
+#include "octo_adra_ros_wrapper/SetCom.h"
+#include "octo_adra_ros_wrapper/ResetOptions.h"
 #include "octo_adra_ros_wrapper/TargetValue.h"
 #include "octo_adra_ros_wrapper/ActuatorStatus.h"
 
@@ -104,6 +106,8 @@ private:
     ros::ServiceServer disable_brakes_srv_;
     ros::ServiceServer set_command_mode_srv_;
     ros::ServiceServer set_actuator_limits_srv_;
+    ros::ServiceServer set_com_srv_;
+    ros::ServiceServer reset_options_srv_;
 
 	///ROS Timer
 	ros::Timer update_timer_;
@@ -172,12 +176,30 @@ private:
 
 	/**
      * @brief Service call to set pos, vel and tau limits of the actuator
-     * @param req - octo_adra_ros_wrapper::SetMode::Request
-     * @param res - octo_adra_ros_wrapper::SetMode::Response
+     * @param req - octo_adra_ros_wrapper::SetLimits::Request
+     * @param res - octo_adra_ros_wrapper::SetLimits::Response
      * @return bool - true if success
      */
     bool set_actuator_limits_srv_callback_(octo_adra_ros_wrapper::SetLimits::Request &req,
                                         octo_adra_ros_wrapper::SetLimits::Response &res);
+
+	/**
+     * @brief Service call to set com id and baud of the actuator
+     * @param req - octo_adra_ros_wrapper::SetCom::Request
+     * @param res - octo_adra_ros_wrapper::SetCom::Response
+     * @return bool - true if success
+     */
+    bool set_com_srv_callback_(octo_adra_ros_wrapper::SetCom::Request &req,
+                                        octo_adra_ros_wrapper::SetCom::Response &res);
+
+	/**
+     * @brief Service call to reset err and driver and erase/save params of the actuator
+     * @param req - octo_adra_ros_wrapper::ResetOptions::Request
+     * @param res - octo_adra_ros_wrapper::ResetOptions::Response
+     * @return bool - true if success
+     */
+    bool reset_options_srv_callback_(octo_adra_ros_wrapper::ResetOptions::Request &req,
+                                        octo_adra_ros_wrapper::ResetOptions::Response &res);																				
 };
 
 

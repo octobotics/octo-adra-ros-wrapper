@@ -59,6 +59,8 @@ add_service_files(
         FILES
         SetMode.srv
 		SetLimits.srv
+		SetCom.srv
+		ResetOptions.srv
 )
 
 ## Generate actions in the 'action' folder

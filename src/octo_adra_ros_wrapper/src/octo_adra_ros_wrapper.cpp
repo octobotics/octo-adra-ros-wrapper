@@ -86,7 +86,6 @@ void AdraRosWrapper::get_params() {
         baud_rate_ = 921600;
         ROS_WARN("%s Parameter baud_rate not found, using default value %d", log_header_.c_str(), baud_rate_);
     }
-
 	if (!nh_.getParam("/octo_adra_ros/publish_rate", publish_rate_)) {
         publish_rate_ = 10.0;
         ROS_WARN("%s Parameter publish_rate not found, using default value %f", log_header_.c_str(), publish_rate_);
@@ -128,6 +127,10 @@ void AdraRosWrapper::init_subs_pubs_srvs() {
                                                &AdraRosWrapper::disable_brakes_srv_callback_, this);
 	set_actuator_limits_srv_ = nh_.advertiseService("/octo_adra_ros/set_actuator_limits",
                                                &AdraRosWrapper::set_actuator_limits_srv_callback_, this);
+	set_com_srv_ = nh_.advertiseService("/octo_adra_ros/set_com",
+                                               &AdraRosWrapper::set_com_srv_callback_, this);
+	reset_options_srv_ = nh_.advertiseService("/octo_adra_ros/reset_options",
+                                               &AdraRosWrapper::reset_options_srv_callback_, this);												   											   
 
 	///ROS Timer
 	update_timer_ = nh_.createTimer(ros::Duration(1.0 / publish_rate_), &AdraRosWrapper::pub_actuator_status, this);
@@ -297,8 +300,8 @@ bool AdraRosWrapper::set_actuator_limits_srv_callback_(octo_adra_ros_wrapper::Se
                                         octo_adra_ros_wrapper::SetLimits::Response &res){
 	/**
      * @brief Service call to set pos, vel and tau limits of the actuator
-     * @param req - octo_adra_ros_wrapper::SetMode::Request
-     * @param res - octo_adra_ros_wrapper::SetMode::Response
+     * @param req - octo_adra_ros_wrapper::SetLimits::Request
+     * @param res - octo_adra_ros_wrapper::SetLimits::Response
      * @return bool - true if success
      */
 
@@ -327,8 +330,79 @@ bool AdraRosWrapper::set_actuator_limits_srv_callback_(octo_adra_ros_wrapper::Se
 	ROS_INFO("All the limits have been set successfully");
 
 	return true;
-
 }
+
+bool AdraRosWrapper::set_com_srv_callback_(octo_adra_ros_wrapper::SetCom::Request &req,
+                                        octo_adra_ros_wrapper::SetCom::Response &res){
+	/**
+     * @brief Service call to set com id and baud of the actuator
+     * @param req - octo_adra_ros_wrapper::SetCom::Request
+     * @param res - octo_adra_ros_wrapper::SetCom::Response
+     * @return bool - true if success
+     */
+
+	// Set com_id 
+	res.response.push_back(adra_api_->set_com_id(req.id, req.com_id));
+	// Set com_baud
+	res.response.push_back(adra_api_->set_com_baud(req.id, req.com_baud));
+
+	for (int val : res.response){
+		if (val != 0){
+			res.success = false;
+			ROS_ERROR("Setting the parameters failed");
+			return false;
+		}
+	}
+	ROS_INFO("Both com_id and com_baud have been set successfully");
+
+	return true;
+}
+
+bool AdraRosWrapper::reset_options_srv_callback_(octo_adra_ros_wrapper::ResetOptions::Request &req,
+                                        octo_adra_ros_wrapper::ResetOptions::Response &res){
+	/**
+     * @brief Service call to reset err and driver and erase/save params of the actuator
+     * @param req - octo_adra_ros_wrapper::ResetOptions::Request
+     * @param res - octo_adra_ros_wrapper::ResetOptions::Response
+     * @return bool - true if success
+     */
+
+	// reset err
+	if (req.reset_err == true) 
+		res.response.push_back(adra_api_->reset_err(req.id));
+	else
+		res.response.push_back(0);
+	
+	// restart_driver
+	if (req.restart_driver == true) 
+		res.response.push_back(adra_api_->restart_driver(req.id));
+	else
+		res.response.push_back(0);
+
+	// erase_parm
+	if (req.erase_parm == true) 
+		res.response.push_back(adra_api_->erase_parm(req.id));
+	else
+		res.response.push_back(0);
+
+	// saved_parm
+	if (req.saved_parm == true) 
+		res.response.push_back(adra_api_->saved_parm(req.id));
+	else
+		res.response.push_back(0);
+
+	for (int val : res.response){
+		if (val != 0){
+			res.success = false;
+			ROS_ERROR("Setting the parameters failed");
+			return false;
+		}
+	}
+	ROS_INFO("Required functions have been executed successfully");
+
+	return true;
+}
+
 
 void AdraRosWrapper::cmd_vel_callback_(const octo_adra_ros_wrapper::TargetValue::ConstPtr &msg) {
     /**

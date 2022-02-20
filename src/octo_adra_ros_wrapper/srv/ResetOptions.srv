@@ -1,0 +1,9 @@
+# TODO: Think of a better name for this service
+int64 id
+bool reset_err
+bool restart_driver
+bool erase_parm
+bool saved_parm
+---
+bool success
+int64[] response
