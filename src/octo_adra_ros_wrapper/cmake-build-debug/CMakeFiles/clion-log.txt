@@ -1,19 +1,6 @@
 /snap/clion/180/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper
--- The C compiler identification is GNU 7.5.0
--- The CXX compiler identification is GNU 7.5.0
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /usr/lib/ccache/cc - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
 -- Using CATKIN_DEVEL_PREFIX: /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/devel
--- Using CMAKE_PREFIX_PATH: /opt/ros/melodic
--- This workspace overlays: /opt/ros/melodic
+-- Using CMAKE_PREFIX_PATH: 
 -- Found PythonInterp: /usr/bin/python2 (found suitable version "2.7.17", minimum required is "2") 
 -- Using PYTHON_EXECUTABLE: /usr/bin/python2
 -- Using Debian Python package layout
@@ -48,20 +35,23 @@ CMake Deprecation Warning at /usr/src/googletest/googletest/CMakeLists.txt:48 (c
 
 
 -- Found PythonInterp: /usr/bin/python2 (found version "2.7.17") 
--- Looking for pthread.h
--- Looking for pthread.h - found
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
--- Looking for pthread_create in pthreads
--- Looking for pthread_create in pthreads - not found
--- Looking for pthread_create in pthread
--- Looking for pthread_create in pthread - found
--- Found Threads: TRUE  
 -- Using Python nosetests: /usr/bin/nosetests-2.7
 -- catkin 0.7.29
 -- BUILD_SHARED_LIBS is on
--- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- octo_adra_ros_wrapper: 1 messages, 1 services
--- Configuring done
--- Generating done
--- Build files have been written to: /home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug
+Traceback (most recent call last):
+  File "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/generate_cached_setup.py", line 20, in <module>
+    from catkin.environment_cache import generate_environment_script
+ImportError: No module named catkin.environment_cache
+CMake Error at /opt/ros/melodic/share/catkin/cmake/safe_execute_process.cmake:11 (message):
+  execute_process(/usr/bin/python2
+  "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/catkin_generated/generate_cached_setup.py")
+  returned error code 1
+Call Stack (most recent call first):
+  /opt/ros/melodic/share/catkin/cmake/all.cmake:208 (safe_execute_process)
+  /opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake:20 (include)
+  CMakeLists.txt:10 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/home/octobotics/octo-adra-ros-wrapper/src/octo_adra_ros_wrapper/cmake-build-debug/CMakeFiles/CMakeError.log".

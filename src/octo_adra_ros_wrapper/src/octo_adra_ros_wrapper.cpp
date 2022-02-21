@@ -33,7 +33,7 @@ AdraRosWrapper::AdraRosWrapper(const ros::NodeHandle &nh, bool debug) {
     baud_rate_ = 926600;
     actuators_enabled_ = false;
     brakes_enabled_ = false;
-	publish_rate_ = 10.0;
+    publish_rate_ = 10.0;
 
     get_params();
     init_subs_pubs_srvs();
@@ -86,7 +86,7 @@ void AdraRosWrapper::get_params() {
         baud_rate_ = 921600;
         ROS_WARN("%s Parameter baud_rate not found, using default value %d", log_header_.c_str(), baud_rate_);
     }
-	if (!nh_.getParam("/octo_adra_ros/publish_rate", publish_rate_)) {
+    if (!nh_.getParam("/octo_adra_ros/publish_rate", publish_rate_)) {
         publish_rate_ = 10.0;
         ROS_WARN("%s Parameter publish_rate not found, using default value %f", log_header_.c_str(), publish_rate_);
     }
@@ -95,9 +95,14 @@ void AdraRosWrapper::get_params() {
     std::stringstream ss(ids_str);
     std::string id_str;
 
-    while (std::getline(ss, id_str, ',')) {
-        ids_.push_back(std::stoi(id_str));
+    if (ids_str.size() == 1) {
+        ids_.push_back(std::stoi(ids_str));
+    } else {
+        while (std::getline(ss, id_str, ',')) {
+            ids_.push_back(std::stoi(id_str));
+        }
     }
+
 }
 
 void AdraRosWrapper::init_subs_pubs_srvs() {
@@ -107,8 +112,8 @@ void AdraRosWrapper::init_subs_pubs_srvs() {
      * @return None
      */
 
-	///publishers
-	pub_actuator_status_ = nh_.advertise<octo_adra_ros_wrapper::ActuatorStatus>("/octo_adra_ros/actuator_status",10);
+    ///publishers
+    pub_actuator_status_ = nh_.advertise<octo_adra_ros_wrapper::ActuatorStatus>("/octo_adra_ros/actuator_status", 10);
 
     /// subscribers
     sub_cmd_vel_ = nh_.subscribe("/octo_adra_ros/cmd_vel", 1, &AdraRosWrapper::cmd_vel_callback_, this);
@@ -118,22 +123,22 @@ void AdraRosWrapper::init_subs_pubs_srvs() {
     set_command_mode_srv_ = nh_.advertiseService("/octo_adra_ros/set_mode",
                                                  &AdraRosWrapper::set_command_mode_srv_callback_, this);
     enable_actuators_srv_ = nh_.advertiseService("/octo_adra_ros/enable_actuators",
-                                                 &AdraRosWrapper::enable_actuators_srv_callback_,this);
+                                                 &AdraRosWrapper::enable_actuators_srv_callback_, this);
     disable_actuators_srv_ = nh_.advertiseService("/octo_adra_ros/disable_actuators",
                                                   &AdraRosWrapper::disable_actuators_srv_callback_, this);
     enable_brakes_srv_ = nh_.advertiseService("/octo_adra_ros/enable_brakes",
                                               &AdraRosWrapper::enable_brakes_srv_callback_, this);
     disable_brakes_srv_ = nh_.advertiseService("/octo_adra_ros/disable_brakes",
                                                &AdraRosWrapper::disable_brakes_srv_callback_, this);
-	set_actuator_limits_srv_ = nh_.advertiseService("/octo_adra_ros/set_actuator_limits",
-                                               &AdraRosWrapper::set_actuator_limits_srv_callback_, this);
-	set_com_srv_ = nh_.advertiseService("/octo_adra_ros/set_com",
-                                               &AdraRosWrapper::set_com_srv_callback_, this);
-	reset_options_srv_ = nh_.advertiseService("/octo_adra_ros/reset_options",
-                                               &AdraRosWrapper::reset_options_srv_callback_, this);												   											   
+    set_actuator_limits_srv_ = nh_.advertiseService("/octo_adra_ros/set_actuator_limits",
+                                                    &AdraRosWrapper::set_actuator_limits_srv_callback_, this);
+    set_com_srv_ = nh_.advertiseService("/octo_adra_ros/set_com",
+                                        &AdraRosWrapper::set_com_srv_callback_, this);
+    reset_options_srv_ = nh_.advertiseService("/octo_adra_ros/reset_options",
+                                              &AdraRosWrapper::reset_options_srv_callback_, this);
 
-	///ROS Timer
-	update_timer_ = nh_.createTimer(ros::Duration(1.0 / publish_rate_), &AdraRosWrapper::pub_actuator_status, this);
+    ///ROS Timer
+    update_timer_ = nh_.createTimer(ros::Duration(1.0 / publish_rate_), &AdraRosWrapper::pub_actuator_status, this);
 }
 
 bool AdraRosWrapper::enable_actuators_srv_callback_(std_srvs::Trigger::Request &req, std_srvs::Trigger::Response &res) {
@@ -297,110 +302,193 @@ bool AdraRosWrapper::set_command_mode_srv_callback_(octo_adra_ros_wrapper::SetMo
 }
 
 bool AdraRosWrapper::set_actuator_limits_srv_callback_(octo_adra_ros_wrapper::SetLimits::Request &req,
-                                        octo_adra_ros_wrapper::SetLimits::Response &res){
-	/**
+                                                       octo_adra_ros_wrapper::SetLimits::Response &res) {
+    /**
      * @brief Service call to set pos, vel and tau limits of the actuator
      * @param req - octo_adra_ros_wrapper::SetLimits::Request
      * @param res - octo_adra_ros_wrapper::SetLimits::Response
      * @return bool - true if success
      */
 
-	// Position Limits (min, max, diff)
-	res.response.push_back(adra_api_->set_pos_limit_min(req.id, req.pos_limit_min));
-	res.response.push_back(adra_api_->set_pos_limit_max(req.id, req.pos_limit_max));
-	res.response.push_back(adra_api_->set_pos_limit_diff(req.id, req.pos_limit_diff));
+    /// Position Limits (min, max, diff) in radians, do not set if 0
+    if (req.pos_limit_min != 0 || req.pos_limit_max != 0 || req.pos_limit_diff != 0) {
+        ROS_INFO("%s Set position limits", log_header_.c_str());
+        for (int id: ids_) {
+            res.response.push_back(adra_api_->set_pos_limit_min(id, req.pos_limit_min));
+            if (res.response.back() == 0) {
+                ROS_INFO("%s Actuator %d set position min limit to %f", log_header_.c_str(), id, req.pos_limit_min);
+            } else {
+                ROS_ERROR("%s Actuator %d set position min limit to %f failed", log_header_.c_str(), id,
+                          req.pos_limit_min);
+            }
+            res.response.push_back(adra_api_->set_pos_limit_max(id, req.pos_limit_max));
+            if (res.response.back() == 0) {
+                ROS_INFO("%s Actuator %d set position max limit to %f", log_header_.c_str(), id, req.pos_limit_max);
+            } else {
+                ROS_ERROR("%s Actuator %d set position max limit to %f failed", log_header_.c_str(), id,
+                          req.pos_limit_max);
+            }
+            res.response.push_back(adra_api_->set_pos_limit_diff(id, req.pos_limit_diff));
+            if (res.response.back() == 0) {
+                ROS_INFO("%s Actuator %d set position diff limit to %f", log_header_.c_str(), id, req.pos_limit_diff);
+            } else {
+                ROS_ERROR("%s Actuator %d set position diff limit to %f failed", log_header_.c_str(), id,
+                          req.pos_limit_diff);
+            }
+        }
+    }
 
-	// Velocity Limits (min, max, diff)
-	res.response.push_back(adra_api_->set_vel_limit_min(req.id, req.vel_limit_min));
-	res.response.push_back(adra_api_->set_vel_limit_max(req.id, req.vel_limit_max));
-	res.response.push_back(adra_api_->set_vel_limit_diff(req.id, req.vel_limit_diff));
+    //    res.response.push_back(adra_api_->set_pos_limit_min(req.id, req.pos_limit_min));
+    //    res.response.push_back(adra_api_->set_pos_limit_max(req.id, req.pos_limit_max));
+    //    res.response.push_back(adra_api_->set_pos_limit_diff(req.id, req.pos_limit_diff));
 
-	// Effort Limits (min, max, diff)
-	res.response.push_back(adra_api_->set_tau_limit_min(req.id, req.tau_limit_min));
-	res.response.push_back(adra_api_->set_tau_limit_max(req.id, req.tau_limit_diff));
-	res.response.push_back(adra_api_->set_tau_limit_diff(req.id, req.tau_limit_diff));
+    /// Velocity Limits (min, max, diff) in radians/s, do not set if 0
 
-	for (int val : res.response){
-		if (val != 0){
-			res.success = false;
-			ROS_ERROR("Setting the limits failed");
-			return false;
-		}
-	}
-	ROS_INFO("All the limits have been set successfully");
+    if (req.vel_limit_min != 0 || req.vel_limit_max != 0 || req.vel_limit_diff != 0) {
+        ROS_INFO("%s Set velocity limits", log_header_.c_str());
+        for (int id: ids_) {
+            res.response.push_back(adra_api_->set_vel_limit_min(id, req.vel_limit_min));
+            if (res.response.back() == 0) {
+                ROS_INFO("%s Actuator %d set velocity min limit to %f", log_header_.c_str(), id, req.vel_limit_min);
+            } else {
+                ROS_ERROR("%s Actuator %d set velocity min limit to %f failed", log_header_.c_str(), id,
+                          req.vel_limit_min);
+            }
+            res.response.push_back(adra_api_->set_vel_limit_max(id, req.vel_limit_max));
+            if (res.response.back() == 0) {
+                ROS_INFO("%s Actuator %d set velocity max limit to %f", log_header_.c_str(), id, req.vel_limit_max);
+            } else {
+                ROS_ERROR("%s Actuator %d set velocity max limit to %f failed", log_header_.c_str(), id,
+                          req.vel_limit_max);
+            }
+            res.response.push_back(adra_api_->set_vel_limit_diff(id, req.vel_limit_diff));
+            if (res.response.back() == 0) {
+                ROS_INFO("%s Actuator %d set velocity diff limit to %f", log_header_.c_str(), id, req.vel_limit_diff);
+            } else {
+                ROS_ERROR("%s Actuator %d set velocity diff limit to %f failed", log_header_.c_str(), id,
+                          req.vel_limit_diff);
+            }
+        }
+    }
 
-	return true;
+    //    res.response.push_back(adra_api_->set_vel_limit_min(req.id, req.vel_limit_min));
+    //    res.response.push_back(adra_api_->set_vel_limit_max(req.id, req.vel_limit_max));
+    //    res.response.push_back(adra_api_->set_vel_limit_diff(req.id, req.vel_limit_diff));
+
+    /// Tau Limits (min, max, diff) in Nm, do not set if 0
+    if (req.tau_limit_min != 0 || req.tau_limit_max != 0 || req.tau_limit_diff != 0) {
+        ROS_INFO("%s Set tauort limits", log_header_.c_str());
+        for (int id: ids_) {
+            res.response.push_back(adra_api_->set_tau_limit_min(id, req.tau_limit_min));
+            if (res.response.back() == 0) {
+                ROS_INFO("%s Actuator %d set tau min limit to %f", log_header_.c_str(), id, req.tau_limit_min);
+            } else {
+                ROS_ERROR("%s Actuator %d set tau min limit to %f failed", log_header_.c_str(), id,
+                          req.tau_limit_min);
+            }
+            res.response.push_back(adra_api_->set_tau_limit_max(id, req.tau_limit_max));
+            if (res.response.back() == 0) {
+                ROS_INFO("%s Actuator %d set tau max limit to %f", log_header_.c_str(), id, req.tau_limit_max);
+            } else {
+                ROS_ERROR("%s Actuator %d set tau max limit to %f failed", log_header_.c_str(), id,
+                          req.tau_limit_max);
+            }
+            res.response.push_back(adra_api_->set_tau_limit_diff(id, req.tau_limit_diff));
+            if (res.response.back() == 0) {
+                ROS_INFO("%s Actuator %d set tau diff limit to %f", log_header_.c_str(), id, req.tau_limit_diff);
+            } else {
+                ROS_ERROR("%s Actuator %d set tau diff limit to %f failed", log_header_.c_str(), id,
+                          req.tau_limit_diff);
+            }
+        }
+    }
+
+
+    //    res.response.push_back(adra_api_->set_tau_limit_min(req.id, req.tau_limit_min));
+    //    res.response.push_back(adra_api_->set_tau_limit_max(req.id, req.tau_limit_diff));
+    //    res.response.push_back(adra_api_->set_tau_limit_diff(req.id, req.tau_limit_diff));
+
+    for (int val: res.response) {
+        if (val != 0) {
+            res.success = false;
+            ROS_ERROR("%sSetting the limits failed", log_header_.c_str());
+            return false;
+        }
+    }
+    ROS_INFO("%sAll the limits have been set successfully", log_header_.c_str());
+    res.success = true;
+    return true;
 }
 
 bool AdraRosWrapper::set_com_srv_callback_(octo_adra_ros_wrapper::SetCom::Request &req,
-                                        octo_adra_ros_wrapper::SetCom::Response &res){
-	/**
+                                           octo_adra_ros_wrapper::SetCom::Response &res) {
+    /**
      * @brief Service call to set com id and baud of the actuator
      * @param req - octo_adra_ros_wrapper::SetCom::Request
      * @param res - octo_adra_ros_wrapper::SetCom::Response
      * @return bool - true if success
      */
 
-	// Set com_id 
-	res.response.push_back(adra_api_->set_com_id(req.id, req.com_id));
-	// Set com_baud
-	res.response.push_back(adra_api_->set_com_baud(req.id, req.com_baud));
+    // Set com_id
+    res.response.push_back(adra_api_->set_com_id(req.id, req.com_id));
+    // Set com_baud
+    res.response.push_back(adra_api_->set_com_baud(req.id, req.com_baud));
 
-	for (int val : res.response){
-		if (val != 0){
-			res.success = false;
-			ROS_ERROR("Setting the parameters failed");
-			return false;
-		}
-	}
-	ROS_INFO("Both com_id and com_baud have been set successfully");
+    for (int val: res.response) {
+        if (val != 0) {
+            res.success = false;
+            ROS_ERROR("Setting the parameters failed");
+            return false;
+        }
+    }
+    ROS_INFO("Both com_id and com_baud have been set successfully");
 
-	return true;
+    return true;
 }
 
 bool AdraRosWrapper::reset_options_srv_callback_(octo_adra_ros_wrapper::ResetOptions::Request &req,
-                                        octo_adra_ros_wrapper::ResetOptions::Response &res){
-	/**
+                                                 octo_adra_ros_wrapper::ResetOptions::Response &res) {
+    /**
      * @brief Service call to reset err and driver and erase/save params of the actuator
      * @param req - octo_adra_ros_wrapper::ResetOptions::Request
      * @param res - octo_adra_ros_wrapper::ResetOptions::Response
      * @return bool - true if success
      */
 
-	// reset err
-	if (req.reset_err == true) 
-		res.response.push_back(adra_api_->reset_err(req.id));
-	else
-		res.response.push_back(0);
-	
-	// restart_driver
-	if (req.restart_driver == true) 
-		res.response.push_back(adra_api_->restart_driver(req.id));
-	else
-		res.response.push_back(0);
+    // reset err
+    if (req.reset_err == true)
+        res.response.push_back(adra_api_->reset_err(req.id));
+    else
+        res.response.push_back(0);
 
-	// erase_parm
-	if (req.erase_parm == true) 
-		res.response.push_back(adra_api_->erase_parm(req.id));
-	else
-		res.response.push_back(0);
+    // restart_driver
+    if (req.restart_driver == true)
+        res.response.push_back(adra_api_->restart_driver(req.id));
+    else
+        res.response.push_back(0);
 
-	// saved_parm
-	if (req.saved_parm == true) 
-		res.response.push_back(adra_api_->saved_parm(req.id));
-	else
-		res.response.push_back(0);
+    // erase_parm
+    if (req.erase_parm == true)
+        res.response.push_back(adra_api_->erase_parm(req.id));
+    else
+        res.response.push_back(0);
 
-	for (int val : res.response){
-		if (val != 0){
-			res.success = false;
-			ROS_ERROR("Setting the parameters failed");
-			return false;
-		}
-	}
-	ROS_INFO("Required functions have been executed successfully");
+    // saved_parm
+    if (req.saved_parm == true)
+        res.response.push_back(adra_api_->saved_parm(req.id));
+    else
+        res.response.push_back(0);
 
-	return true;
+    for (int val: res.response) {
+        if (val != 0) {
+            res.success = false;
+            ROS_ERROR("Setting the parameters failed");
+            return false;
+        }
+    }
+    ROS_INFO("Required functions have been executed successfully");
+
+    return true;
 }
 
 
@@ -443,169 +531,169 @@ void AdraRosWrapper::cmd_pose_callback_(const octo_adra_ros_wrapper::TargetValue
 }
 
 // TODO: Think of a better structure for the actuator status publisher function
-void AdraRosWrapper::pub_actuator_status(const ros::TimerEvent &){
-	/**
-	 * @brief Publish the status of all the ids of the actuator
-	 * @param ros::TimerEvent
-	 * @return none
-	 *
-	 */
-	octo_adra_ros_wrapper::ActuatorStatus status;
-	std::string value_str;
-	char value_char[24];
-	uint8_t value_uint;
-	int8_t value_int8[2];
-	uint8_t value_uint8[2];
-	float value_float;
-	int ret;
+void AdraRosWrapper::pub_actuator_status(const ros::TimerEvent &) {
+    /**
+     * @brief Publish the status of all the ids of the actuator
+     * @param ros::TimerEvent
+     * @return none
+     *
+     */
+    octo_adra_ros_wrapper::ActuatorStatus status;
+    std::string value_str;
+    char value_char[24];
+    uint8_t value_uint;
+    int8_t value_int8[2];
+    uint8_t value_uint8[2];
+    float value_float;
+    int ret;
 
-	for (int id : ids_){
+    for (int id: ids_) {
 
-		// Get UUID, sw_version, hw_version, multi_version
-		ret = adra_api_->get_uuid(id, value_char);
-		value_str = value_char;
-		status.uuid.push_back(value_str);
+        // Get UUID, sw_version, hw_version, multi_version
+        ret = adra_api_->get_uuid(id, value_char);
+        value_str = value_char;
+        status.uuid.push_back(value_str);
 
-		ret = adra_api_->get_sw_version(id, value_char);
-		value_str = value_char;
-		status.sw_version.push_back(value_str);
+        ret = adra_api_->get_sw_version(id, value_char);
+        value_str = value_char;
+        status.sw_version.push_back(value_str);
 
-		ret = adra_api_->get_hw_version(id, value_char);
-		value_str = value_char;
-		status.hw_version.push_back(value_str);
+        ret = adra_api_->get_hw_version(id, value_char);
+        value_str = value_char;
+        status.hw_version.push_back(value_str);
 
-		ret = adra_api_->get_multi_version(id, value_char);
-		value_str = value_char;
-		status.multi_version.push_back(value_str);
+        ret = adra_api_->get_multi_version(id, value_char);
+        value_str = value_char;
+        status.multi_version.push_back(value_str);
 
-		// Get mech_ratio, elec_ration
-		ret = adra_api_->get_mech_ratio(id, &value_float);
-		status.mech_ratio.push_back(value_float);
+        // Get mech_ratio, elec_ration
+        ret = adra_api_->get_mech_ratio(id, &value_float);
+        status.mech_ratio.push_back(value_float);
 
-		ret = adra_api_->get_elec_ratio(id, &value_float);
-		status.elec_ratio.push_back(value_float);
+        ret = adra_api_->get_elec_ratio(id, &value_float);
+        status.elec_ratio.push_back(value_float);
 
-		// Get motion_dir
-		ret = adra_api_->get_motion_dir(id, &value_uint);
-		status.motion_dir.push_back(value_uint);
+        // Get motion_dir
+        ret = adra_api_->get_motion_dir(id, &value_uint);
+        status.motion_dir.push_back(value_uint);
 
-		// Get temp_limit, volt_limit, curr_limit
-		ret = adra_api_->get_temp_limit(id, &value_int8[0], &value_int8[1]);
-		status.temp_limit_min.push_back(value_int8[0]);
-		status.temp_limit_max.push_back(value_int8[1]);
+        // Get temp_limit, volt_limit, curr_limit
+        ret = adra_api_->get_temp_limit(id, &value_int8[0], &value_int8[1]);
+        status.temp_limit_min.push_back(value_int8[0]);
+        status.temp_limit_max.push_back(value_int8[1]);
 
-		ret = adra_api_->get_volt_limit(id, &value_uint8[0], &value_uint8[1]);
-		status.volt_limit_min.push_back(value_uint8[0]);
-		status.volt_limit_max.push_back(value_uint8[1]);
+        ret = adra_api_->get_volt_limit(id, &value_uint8[0], &value_uint8[1]);
+        status.volt_limit_min.push_back(value_uint8[0]);
+        status.volt_limit_max.push_back(value_uint8[1]);
 
-		ret = adra_api_->get_curr_limit(id, &value_float);
-		status.curr_limit.push_back(value_float);
+        ret = adra_api_->get_curr_limit(id, &value_float);
+        status.curr_limit.push_back(value_float);
 
-		// Get motion_mode, motion_enable, brake_enable
-		ret = adra_api_->get_motion_mode(id, &value_uint);
-		status.motion_mode.push_back(value_uint);
+        // Get motion_mode, motion_enable, brake_enable
+        ret = adra_api_->get_motion_mode(id, &value_uint);
+        status.motion_mode.push_back(value_uint);
 
-		ret = adra_api_->get_motion_enable(id, &value_uint);
-		status.motion_enable.push_back(value_uint);
+        ret = adra_api_->get_motion_enable(id, &value_uint);
+        status.motion_enable.push_back(value_uint);
 
-		ret = adra_api_->get_brake_enable(id, &value_uint);
-		status.brake_enable.push_back(value_uint);
+        ret = adra_api_->get_brake_enable(id, &value_uint);
+        status.brake_enable.push_back(value_uint);
 
-		// Get temp_driver, temp_motor, bus_volt, bus_curr, multi_volt
-		ret = adra_api_->get_temp_driver(id, &value_float);
-		status.temp_driver.push_back(value_float);
+        // Get temp_driver, temp_motor, bus_volt, bus_curr, multi_volt
+        ret = adra_api_->get_temp_driver(id, &value_float);
+        status.temp_driver.push_back(value_float);
 
-		ret = adra_api_->get_temp_motor(id, &value_float);
-		status.temp_motor.push_back(value_float);
+        ret = adra_api_->get_temp_motor(id, &value_float);
+        status.temp_motor.push_back(value_float);
 
-		ret = adra_api_->get_bus_volt(id, &value_float);
-		status.bus_volt.push_back(value_float);
+        ret = adra_api_->get_bus_volt(id, &value_float);
+        status.bus_volt.push_back(value_float);
 
-		ret = adra_api_->get_bus_curr(id, &value_float);
-		status.bus_curr.push_back(value_float);
+        ret = adra_api_->get_bus_curr(id, &value_float);
+        status.bus_curr.push_back(value_float);
 
-		ret = adra_api_->get_multi_volt(id, &value_float);
-		status.multi_volt.push_back(value_float);
+        ret = adra_api_->get_multi_volt(id, &value_float);
+        status.multi_volt.push_back(value_float);
 
-		// Get error_code
-		ret = adra_api_->get_error_code(id, &value_uint);
-		status.error_code.push_back(value_uint);
+        // Get error_code
+        ret = adra_api_->get_error_code(id, &value_uint);
+        status.error_code.push_back(value_uint);
 
-		// Get pos, vel and tau limit min, max and diff
-		ret = adra_api_->get_pos_limit_min(id, &value_float);
-		status.pos_limit_min.push_back(value_float);
+        // Get pos, vel and tau limit min, max and diff
+        ret = adra_api_->get_pos_limit_min(id, &value_float);
+        status.pos_limit_min.push_back(value_float);
 
-		ret = adra_api_->get_pos_limit_max(id, &value_float);
-		status.pos_limit_max.push_back(value_float);
+        ret = adra_api_->get_pos_limit_max(id, &value_float);
+        status.pos_limit_max.push_back(value_float);
 
-		ret = adra_api_->get_pos_limit_diff(id, &value_float);
-		status.pos_limit_diff.push_back(value_float);
+        ret = adra_api_->get_pos_limit_diff(id, &value_float);
+        status.pos_limit_diff.push_back(value_float);
 
-		ret = adra_api_->get_vel_limit_min(id, &value_float);
-		status.vel_limit_min.push_back(value_float);
+        ret = adra_api_->get_vel_limit_min(id, &value_float);
+        status.vel_limit_min.push_back(value_float);
 
-		ret = adra_api_->get_vel_limit_max(id, &value_float);
-		status.vel_limit_max.push_back(value_float);
+        ret = adra_api_->get_vel_limit_max(id, &value_float);
+        status.vel_limit_max.push_back(value_float);
 
-		ret = adra_api_->get_vel_limit_diff(id, &value_float);
-		status.vel_limit_diff.push_back(value_float);
+        ret = adra_api_->get_vel_limit_diff(id, &value_float);
+        status.vel_limit_diff.push_back(value_float);
 
-		ret = adra_api_->get_tau_limit_min(id, &value_float);
-		status.tau_limit_min.push_back(value_float);
+        ret = adra_api_->get_tau_limit_min(id, &value_float);
+        status.tau_limit_min.push_back(value_float);
 
-		ret = adra_api_->get_tau_limit_max(id, &value_float);
-		status.tau_limit_max.push_back(value_float);
+        ret = adra_api_->get_tau_limit_max(id, &value_float);
+        status.tau_limit_max.push_back(value_float);
 
-		ret = adra_api_->get_tau_limit_diff(id, &value_float);
-		status.tau_limit_diff.push_back(value_float);
+        ret = adra_api_->get_tau_limit_diff(id, &value_float);
+        status.tau_limit_diff.push_back(value_float);
 
-		// Get pos, vel and tau target and current value
-		ret = adra_api_->get_pos_target(id, &value_float);
-		status.pos_target.push_back(value_float);
+        // Get pos, vel and tau target and current value
+        ret = adra_api_->get_pos_target(id, &value_float);
+        status.pos_target.push_back(value_float);
 
-		ret = adra_api_->get_pos_current(id, &value_float);
-		status.pos_current.push_back(value_float);
+        ret = adra_api_->get_pos_current(id, &value_float);
+        status.pos_current.push_back(value_float);
 
-		ret = adra_api_->get_vel_target(id, &value_float);
-		status.vel_target.push_back(value_float);
+        ret = adra_api_->get_vel_target(id, &value_float);
+        status.vel_target.push_back(value_float);
 
-		ret = adra_api_->get_vel_current(id, &value_float);
-		status.vel_current.push_back(value_float);
+        ret = adra_api_->get_vel_current(id, &value_float);
+        status.vel_current.push_back(value_float);
 
-		ret = adra_api_->get_tau_target(id, &value_float);
-		status.tau_target.push_back(value_float);
+        ret = adra_api_->get_tau_target(id, &value_float);
+        status.tau_target.push_back(value_float);
 
-		ret = adra_api_->get_tau_current(id, &value_float);
-		status.tau_current.push_back(value_float);
+        ret = adra_api_->get_tau_current(id, &value_float);
+        status.tau_current.push_back(value_float);
 
-		// Get pos, vel and tau pid values
-		ret = adra_api_->get_pos_pidp(id, &value_float);
-		status.pos_pidp.push_back(value_float);
+        // Get pos, vel and tau pid values
+        ret = adra_api_->get_pos_pidp(id, &value_float);
+        status.pos_pidp.push_back(value_float);
 
-		ret = adra_api_->get_vel_pidp(id, &value_float);
-		status.vel_pidp.push_back(value_float);
+        ret = adra_api_->get_vel_pidp(id, &value_float);
+        status.vel_pidp.push_back(value_float);
 
-		ret = adra_api_->get_vel_pidi(id, &value_float);
-		status.vel_pidi.push_back(value_float);
+        ret = adra_api_->get_vel_pidi(id, &value_float);
+        status.vel_pidi.push_back(value_float);
 
-		ret = adra_api_->get_tau_pidp(id, &value_float);
-		status.tau_pidp.push_back(value_float);
+        ret = adra_api_->get_tau_pidp(id, &value_float);
+        status.tau_pidp.push_back(value_float);
 
-		ret = adra_api_->get_tau_pidi(id, &value_float);
-		status.tau_pidi.push_back(value_float);
+        ret = adra_api_->get_tau_pidi(id, &value_float);
+        status.tau_pidi.push_back(value_float);
 
-		// Get pos, vel and tau smooth cyc
-		ret = adra_api_->get_pos_smooth_cyc(id, &value_uint);
-		status.pos_smooth_cyc.push_back(value_uint);
+        // Get pos, vel and tau smooth cyc
+        ret = adra_api_->get_pos_smooth_cyc(id, &value_uint);
+        status.pos_smooth_cyc.push_back(value_uint);
 
-		ret = adra_api_->get_vel_smooth_cyc(id, &value_uint);
-		status.vel_smooth_cyc.push_back(value_uint);
+        ret = adra_api_->get_vel_smooth_cyc(id, &value_uint);
+        status.vel_smooth_cyc.push_back(value_uint);
 
-		ret = adra_api_->get_tau_smooth_cyc(id, &value_uint);
-		status.tau_smooth_cyc.push_back(value_uint);
-	}
+        ret = adra_api_->get_tau_smooth_cyc(id, &value_uint);
+        status.tau_smooth_cyc.push_back(value_uint);
+    }
 
-	pub_actuator_status_.publish(status);
+    pub_actuator_status_.publish(status);
 
 }
 
